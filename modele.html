@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Modele de Carporturi – Ghid Complet | CarportPro</title>
+<meta name="description" content="12 modele de carporturi explicate clar: monopantă, dublă pantă, arcuit, stâlp central, stâlp ramificat, tip W/N/V, pentru autocare și structură de membrană. Avantaje și recomandări pentru fiecare."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Jost',system-ui,sans-serif;background:#F7F5F1;color:#1C1C1A;-webkit-font-smoothing:antialiased;line-height:1.65}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit}
+
+/* ─── DESIGN TOKENS ────────────────────────────────────────────────────────── */
+:root{
+  --ch:#1C1C1A; --ch-mid:#3A3A38; --ch-lt:#6A6A68;
+  --bronze:#8B6B3A; --bronze-lt:#B08A52;
+  --cream:#F7F5F1; --cream-dk:#EDE9E2; --cream-md:#E2DDD5; --white:#FFFFFF;
+}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400}
+
+/* ─── LAYOUT ───────────────────────────────────────────────────────────────── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 40px}}
+@media(min-width:1200px){.wrap{padding:0 48px}}
+section.py{padding:clamp(56px,7vw,100px) 0}
+
+.rule{display:block;width:40px;height:1px;background:var(--ch-lt);margin-bottom:22px}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:14px;display:block}
+
+/* ─── BUTTONS ──────────────────────────────────────────────────────────────── */
+.btn,.btn-dark,.btn-outline,.btn-white,.btn-bronze{
+  font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;
+  transition:all .2s;white-space:nowrap;cursor:pointer;border:none;
+}
+.btn-dark:active,.btn-outline:active,.btn-white:active,.btn-bronze:active{transform:scale(.98)}
+.btn-dark{background:var(--ch);color:#fff;padding:14px 26px}
+.btn-dark:hover{background:var(--ch-mid)}
+.btn-outline{background:transparent;border:1px solid var(--ch);color:var(--ch);padding:13px 25px}
+.btn-outline:hover{background:var(--ch);color:#fff}
+.btn-white{background:#fff;color:var(--ch);padding:14px 26px}
+.btn-white:hover{background:var(--cream)}
+
+/* ─── HEADER (solid on this page — no dark hero behind it) ──────────────────── */
+#header{position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:baseline;gap:4px}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ch);font-weight:400}
+.logo-pro{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+.nav-desktop{display:flex;gap:30px;align-items:center}
+.nav-link{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ch-mid);transition:color .15s}
+.nav-link:hover,.nav-link.current{color:var(--ch)}
+.nav-link.current{border-bottom:1px solid var(--bronze)}
+.hamburger{display:none;background:none;border:none;padding:8px;color:var(--ch)}
+.mobile-menu{display:none;background:#fff;border-top:1px solid var(--cream-md);padding:20px 0 28px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ch);padding:12px 0}
+@media(max-width:767px){.nav-desktop{display:none}#header-cta-desktop{display:none}.hamburger{display:block}}
+
+/* ─── PAGE INTRO ───────────────────────────────────────────────────────────── */
+#page-intro{padding:calc(70px + clamp(40px,6vw,72px)) 0 clamp(40px,6vw,64px);background:var(--cream)}
+.crumb{font-size:11px;color:var(--ch-lt);margin-bottom:22px;letter-spacing:.03em}
+.crumb a{color:var(--ch-lt);transition:color .15s}
+.crumb a:hover{color:var(--ch)}
+.page-intro-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px}
+.page-intro-sub{color:var(--ch-lt);font-size:14px;line-height:1.7;max-width:400px}
+.page-trust-line{margin-top:32px;padding-top:24px;border-top:1px solid var(--cream-md);display:flex;flex-wrap:wrap;gap:28px;color:var(--ch-lt);font-size:12px}
+.page-trust-line strong{color:var(--ch);font-weight:600}
+
+/* ─── HOW TO CHOOSE ────────────────────────────────────────────────────────── */
+#guide{background:var(--white)}
+.guide-head{max-width:620px;margin-bottom:40px}
+.guide-desc{color:var(--ch-lt);font-size:13.5px;line-height:1.7;margin-top:10px}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--cream-md);border:1px solid var(--cream-md)}
+.guide-card{background:#fff;padding:clamp(20px,2.6vw,28px)}
+.guide-q{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ch);margin-bottom:10px;line-height:1.3}
+.guide-a{color:var(--ch-lt);font-size:12.5px;line-height:1.6}
+.guide-a strong{color:var(--bronze);font-weight:600}
+
+/* ─── MODEL FICHES ─────────────────────────────────────────────────────────── */
+#modele-lista{background:var(--cream)}
+.mdl-header{margin-bottom:32px;max-width:640px}
+.mdl-note-top{color:var(--ch-lt);font-size:12px;line-height:1.7;max-width:680px;margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid var(--cream-md)}
+.mdl-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;position:sticky;top:70px;background:var(--cream);padding:12px 0;z-index:10}
+.mdl-tab{background:transparent;border:1px solid var(--cream-md);color:var(--ch-mid);font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;cursor:pointer;transition:all .15s}
+.mdl-tab:hover{border-color:var(--ch-lt)}
+.mdl-tab.active{background:var(--ch);border-color:var(--ch);color:#fff}
+
+.mdl-cat-group{margin-bottom:12px}
+.mdl-cat-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin:40px 0 16px}
+.mdl-cat-title:first-child{margin-top:0}
+
+.mdl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--cream-md);border:1px solid var(--cream-md);margin-bottom:8px}
+.mdl-card{background:#fff;padding:clamp(24px,2.8vw,30px);display:flex;flex-direction:column;transition:opacity .2s}
+.mdl-card[hidden]{display:none}
+.mdl-icon{width:100%;height:56px;margin-bottom:18px;color:var(--bronze)}
+.mdl-tag{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:8px}
+.mdl-title{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ch);margin-bottom:10px;line-height:1.2}
+.mdl-desc{color:var(--ch-lt);font-size:13px;line-height:1.65;margin-bottom:16px}
+.mdl-adv{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.mdl-adv li{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--ch-mid);line-height:1.5}
+.mdl-adv li::before{content:'✓';color:var(--bronze);font-size:11px;flex-shrink:0;font-weight:700;margin-top:2px}
+.mdl-use{margin-top:auto;padding-top:16px;border-top:1px solid var(--cream-md);font-size:11.5px;color:var(--ch-lt);line-height:1.6}
+.mdl-use strong{color:var(--ch);font-weight:600;text-transform:uppercase;font-size:9.5px;letter-spacing:.1em;display:block;margin-bottom:4px}
+
+/* ─── FINAL CTA ────────────────────────────────────────────────────────────── */
+#final-cta{background:var(--ch);color:#fff}
+.fc-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.fc-h{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.4vw,36px);margin-bottom:8px}
+.fc-sub{color:rgba(255,255,255,.55);font-size:13px;max-width:420px}
+.fc-btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn-outline-w{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;padding:14px 26px}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+/* ─── FOOTER ───────────────────────────────────────────────────────────────── */
+footer{background:var(--ch);color:#fff}
+.footer-main{padding:56px 0 40px}
+.footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(28px,4vw,48px)}
+.footer-col-head{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
+.footer-link{display:block;color:rgba(255,255,255,.55);font-size:12px;line-height:2.1;transition:color .15s}
+.footer-link:hover{color:#fff}
+.footer-text{color:rgba(255,255,255,.45);font-size:12px;line-height:2.1}
+.footer-brand-logo{display:flex;align-items:baseline;gap:4px;margin-bottom:12px}
+.fbl-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff}
+.fbl-pro{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-lt)}
+.footer-brand-desc{color:rgba(255,255,255,.4);font-size:12px;line-height:1.7;margin-bottom:18px}
+.footer-contact-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.55);font-size:12px;margin-bottom:8px;transition:color .15s}
+.footer-contact-item:hover{color:#fff}
+.footer-bottom{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-bottom-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.footer-copy{color:rgba(255,255,255,.2);font-size:11px}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{color:rgba(255,255,255,.2);font-size:11px;transition:color .15s}
+.footer-legal a:hover{color:rgba(255,255,255,.5)}
+
+/* ─── FLOATING CTA ─────────────────────────────────────────────────────────── */
+#wa-float{position:fixed;bottom:28px;right:24px;z-index:50;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.35);transition:transform .2s,box-shadow .2s}
+#wa-float:hover{transform:scale(1.07);box-shadow:0 6px 22px rgba(37,211,102,.5)}
+#mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:#fff;border-top:1px solid var(--cream-md);box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.ms-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;font-size:12px;font-weight:600;text-decoration:none;transition:background .15s}
+.ms-btn-phone{color:var(--ch);border-right:1px solid var(--cream-md)}
+.ms-btn-phone:hover{background:var(--cream)}
+.ms-btn-cta{background:var(--ch);color:#fff}
+.ms-btn-cta:hover{background:var(--ch-mid)}
+@media(max-width:767px){#wa-float{display:none}#mobile-sticky{display:flex}body{padding-bottom:58px}.mdl-tabs{top:0}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════════════ -->
+<header id="header">
+  <div class="wrap">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-name">Carport</span>
+        <span class="logo-pro">Pro</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html#products" class="nav-link">Produse</a>
+        <a href="modele.html" class="nav-link current">Modele</a>
+        <a href="index.html#amplasare" class="nav-link">Amplasare</a>
+        <a href="index.html#why-us" class="nav-link">De ce noi</a>
+        <a href="index.html#solar" class="nav-link">Fotovoltaic</a>
+        <a href="index.html#portfolio" class="nav-link">Proiecte</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="index.html#contact" id="header-cta-desktop" class="btn btn-dark" style="font-size:10px;padding:11px 22px">
+        Ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Meniu">
+        <svg id="ham-icon" width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="index.html#products" class="nav-link" style="display:block;padding:12px 0">Produse</a>
+      <a href="modele.html" class="nav-link" style="display:block;padding:12px 0">Modele</a>
+      <a href="index.html#amplasare" class="nav-link" style="display:block;padding:12px 0">Amplasare</a>
+      <a href="index.html#why-us" class="nav-link" style="display:block;padding:12px 0">De ce noi</a>
+      <a href="index.html#solar" class="nav-link" style="display:block;padding:12px 0">Fotovoltaic</a>
+      <a href="index.html#portfolio" class="nav-link" style="display:block;padding:12px 0">Proiecte</a>
+      <a href="index.html#contact" class="nav-link" style="display:block;padding:12px 0">Contact</a>
+      <a href="index.html#contact" class="btn btn-dark" style="margin-top:16px;display:inline-flex">
+        Solicită ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE INTRO
+═══════════════════════════════════════════════════════════════ -->
+<section id="page-intro">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Acasă</a> &nbsp;/&nbsp; Modele</p>
+    <div class="page-intro-grid">
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Gama completă</p>
+        <h1 class="serif" style="font-size:clamp(30px,4.6vw,54px);color:var(--ch);line-height:1.05;max-width:600px">12 modele de carport, fiecare cu rolul lui.</h1>
+      </div>
+      <p class="page-intro-sub">Nu există un model „cel mai bun" — există modelul potrivit pentru terenul, bugetul și scopul tău. Mai jos găsești fiecare structură explicată clar, cu avantaje și recomandare de utilizare.</p>
+    </div>
+    <div class="page-trust-line">
+      <span><strong>12</strong> structuri disponibile</span>
+      <span>Oțel zincat, aluminiu &amp; inox</span>
+      <span>Dimensiuni la comandă, pentru orice model</span>
+      <span>Consultanță gratuită pentru alegerea corectă</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CUM ALEG MODELUL POTRIVIT
+═══════════════════════════════════════════════════════════════ -->
+<section id="guide" class="py">
+  <div class="wrap">
+    <div class="guide-head">
+      <span class="rule"></span>
+      <p class="lbl">Ghid rapid</p>
+      <h2 class="serif" style="font-size:clamp(24px,3.2vw,36px);color:var(--ch)">Cum aleg modelul potrivit?</h2>
+      <p class="guide-desc">Patru întrebări simple te pot îndrepta spre categoria corectă. Dacă tot nu ești sigur, spune-ne despre spațiul tău — recomandăm noi structura, gratuit.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <p class="guide-q">Vreau cel mai bun preț posibil?</p>
+        <p class="guide-a">Alege din categoria <strong>Clasice</strong> — monopantă sau dublă pantă. Cel mai bun raport cost-protecție din gamă.</p>
+      </div>
+      <div class="guide-card">
+        <p class="guide-q">Vreau ca acoperișul să se potrivească cu al casei?</p>
+        <p class="guide-a">Varianta cu <strong>dublă pantă</strong> (dreaptă sau arcuită) urmează linia unui acoperiș clasic.</p>
+      </div>
+      <div class="guide-card">
+        <p class="guide-q">Vreau un design care se remarcă?</p>
+        <p class="guide-a">Categoria <strong>Design arhitectural</strong> — stâlp central, stâlp ramificat sau tip V — sunt gândite ca elemente vizuale, nu doar utilitare.</p>
+      </div>
+      <div class="guide-card">
+        <p class="guide-q">Am nevoie de multe locuri sau vehicule mari?</p>
+        <p class="guide-a">Mergi spre <strong>Capacitate mare</strong> — tip W pentru șiruri de locuri, sau structura pentru autocare și camioane.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     LISTA DE MODELE
+═══════════════════════════════════════════════════════════════ -->
+<section id="modele-lista" class="py">
+  <div class="wrap">
+    <div class="mdl-header">
+      <span class="rule"></span>
+      <p class="lbl">Fișele modelelor</p>
+      <h2 class="serif" style="font-size:clamp(26px,3.6vw,42px);color:var(--ch);line-height:1.1">Toate structurile, pe scurt și la obiect.</h2>
+    </div>
+    <p class="mdl-note-top">Toate modelele sunt construite din oțel zincat, aluminiu și elemente de fixare inox, la dimensiuni personalizate. Filtrează după categorie sau parcurge lista completă.</p>
+
+    <div class="mdl-tabs" role="tablist" aria-label="Filtrează modelele de carport">
+      <button class="mdl-tab active" data-filter="toate">Toate (12)</button>
+      <button class="mdl-tab" data-filter="clasice">Clasice</button>
+      <button class="mdl-tab" data-filter="arhitectural">Design arhitectural</button>
+      <button class="mdl-tab" data-filter="compact">Ușoare &amp; compacte</button>
+      <button class="mdl-tab" data-filter="mare">Capacitate mare</button>
+    </div>
+
+    <div class="mdl-grid">
+
+      <!-- 1 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 50V22L106 10V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 50V38M106 50V10" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Monopantă</p>
+        <h3 class="mdl-title">Carport cu un singur versant</h3>
+        <p class="mdl-desc">Structura cea mai simplă și accesibilă din gamă — un singur acoperiș înclinat, sprijinit pe stâlpi laterali. Fără elemente în plus, doar protecție solidă.</p>
+        <ul class="mdl-adv">
+          <li>Cel mai bun raport preț–protecție</li>
+          <li>Montaj în cel mai scurt timp</li>
+          <li>Ocupă puțin spațiu vizual în curte</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>O mașină, curți mici sau bugete care prioritizează funcționalitatea.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 50V22L60 10L110 22V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 50V34M110 50V34M60 10V22" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Dublă pantă</p>
+        <h3 class="mdl-title">Carport cu două versante</h3>
+        <p class="mdl-desc">Formă simetrică, tip acoperiș clasic de casă. Scurge apa și zăpada în ambele direcții, cu o distribuție mai bună a sarcinii pe structură.</p>
+        <ul class="mdl-adv">
+          <li>Rezistență mai bună la zăpadă abundentă</li>
+          <li>Aspect armonios cu acoperișul casei</li>
+          <li>Potrivit pentru 2 mașini sau spații late</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Proprietăți unde vrei ca și carportul „să semene" cu restul casei.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 50V24C14 24 40 8 106 12V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M14 50V40M106 50V12" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Arcuit</p>
+        <h3 class="mdl-title">Carport arcuit cu un singur versant</h3>
+        <p class="mdl-desc">Aceeași logică structurală ca monopanta, dar cu o linie curbă în loc de una dreaptă. Diferența e vizuală — un profil mai modern.</p>
+        <ul class="mdl-adv">
+          <li>Aspect modern, fără muchii dure</li>
+          <li>Aceeași protecție ca varianta clasică</li>
+          <li>Scurgere eficientă a apei pe toată curba</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Cine vrea funcționalitatea monopantei, dar un aspect mai arătos.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 50C10 50 10 26 10 24C30 8 90 8 110 24C110 26 110 50 110 50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 50V38M110 50V38" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Arcuit simetric</p>
+        <h3 class="mdl-title">Carport arcuit cu două versante</h3>
+        <p class="mdl-desc">Varianta arcuită și simetrică — o formă care atrage privirea fără să pară supradimensionată. Potrivită pentru amplasamente vizibile din stradă.</p>
+        <ul class="mdl-adv">
+          <li>Impact vizual peste medie</li>
+          <li>Rezistență bună la vânt și zăpadă</li>
+          <li>Se integrează în proiecte rezidențiale premium</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Locuințe unde carportul e parte din fațadă, nu doar o anexă.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 24L110 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M60 24V50" stroke="currentColor" stroke-width="2"/><path d="M50 50H70" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Stâlp central</p>
+        <h3 class="mdl-title">Carport cu stâlp central</h3>
+        <p class="mdl-desc">Un singur stâlp, poziționat central, susține întregul acoperiș. Zona din jurul mașinii rămâne complet liberă, fără coloane care să încurce manevrele.</p>
+        <ul class="mdl-adv">
+          <li>Acces și manevre nestânjenite</li>
+          <li>Aspect suspendat, „ușor" vizual</li>
+          <li>Ideal unde spațiul de manevră e limitat</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Curți strâmte, alei înguste sau parcări unde fiecare centimetru contează.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 20H106" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M60 20V38M60 38L44 50M60 38L76 50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Stâlp ramificat</p>
+        <h3 class="mdl-title">Carport cu stâlp ramificat</h3>
+        <p class="mdl-desc">Un singur stâlp se ramifică în puncte de sprijin, ca o structură organică. Cea mai statement piesă din gamă — gândită pentru locuri unde designul contează la fel de mult ca funcția.</p>
+        <ul class="mdl-adv">
+          <li>Element de arhitectură, nu doar utilitate</li>
+          <li>Fără șiruri de stâlpi care blochează spațiul</li>
+          <li>Se remarcă în orice proiect rezidențial</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Reședințe premium, showroom-uri sau spații unde carportul trebuie să impresioneze.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 22L35 44L60 22L85 44L110 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 22V50M110 22V50M60 22V32" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip W</p>
+        <h3 class="mdl-title">Carport cu două versante, tip W</h3>
+        <p class="mdl-desc">Structură modulară, cu acoperiș în forma literei W, gândită pentru șiruri lungi de locuri de parcare. Fiecare modul se sprijină eficient pe cel alăturat.</p>
+        <ul class="mdl-adv">
+          <li>Eficiență structurală pe suprafețe mari</li>
+          <li>Aspect ritmat, ordonat, profesionist</li>
+          <li>Scalabil pe orice număr de locuri</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Parcări comerciale, firme sau ansambluri cu multe locuri de parcare.</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M18 50V16L60 44L102 16V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip N</p>
+        <h3 class="mdl-title">Carport cu un singur versant, tip N</h3>
+        <p class="mdl-desc">Cadru înclinat, asimetric, cu o linie dinamică ce iese din tiparul clasic. Rezistă bine la vânt lateral datorită unghiurilor de sprijin.</p>
+        <ul class="mdl-adv">
+          <li>Profil vizual distinctiv, non-standard</li>
+          <li>Rezistență bună la sarcini laterale</li>
+          <li>Se remarcă în medii comerciale sau industriale</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Firme care vor o parcare acoperită cu identitate vizuală proprie.</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 18H106" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30 18L60 44L90 18" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip V</p>
+        <h3 class="mdl-title">Carport cu un singur versant, tip V</h3>
+        <p class="mdl-desc">Stâlpi înclinați care se unesc într-un punct central, susținând acoperișul dintr-un reazem vizual concentrat. Aspect modern, sculptural.</p>
+        <ul class="mdl-adv">
+          <li>Aspect sculptural, memorabil</li>
+          <li>Sprijin solid din puncte concentrate</li>
+          <li>Potrivit ca element de „intrare" sau reper vizual</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Zone reprezentative — intrări principale, showroom-uri, sedii de firmă.</p>
+      </div>
+
+      <!-- 10 -->
+      <div class="mdl-card" data-cat="compact">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M20 48V28L100 20V48" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 48V40M100 48V22" stroke="currentColor" stroke-width="1.5"/></svg>
+        <p class="mdl-tag">Compact · Versant unic</p>
+        <h3 class="mdl-title">Carport ușor cu un singur versant</h3>
+        <p class="mdl-desc">Versiune redusă ca dimensiune și greutate a monopantei clasice, gândită pentru vehicule ușoare, nu pentru autoturisme mari. Cost mai mic, montaj și mai rapid.</p>
+        <ul class="mdl-adv">
+          <li>Cel mai accesibil cost din gamă</li>
+          <li>Montaj în câteva ore</li>
+          <li>Potrivit și pentru puncte mici de încărcare electrică</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Scutere, biciclete electrice, ATV-uri sau vehicule electrice ușoare.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="mdl-card" data-cat="mare">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M6 24L114 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 24V50M114 24V50" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Capacitate mare · Deschidere largă</p>
+        <h3 class="mdl-title">Carport pentru vehicule comerciale</h3>
+        <p class="mdl-desc">Structură cu deschidere mare, calculată special pentru înălțimea și lățimea autocarelor și camioanelor. Fără stâlpi intermediari care să blocheze manevrele.</p>
+        <ul class="mdl-adv">
+          <li>Deschidere liberă, fără obstacole</li>
+          <li>Rezistență calculată pentru sarcini mari</li>
+          <li>Potrivit pentru flote și transportatori</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Firme de transport, autobaze, flote de camioane sau autocare.</p>
+      </div>
+
+      <!-- 12 -->
+      <div class="mdl-card" data-cat="mare">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 46C24 26 44 20 60 20C76 20 96 26 106 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 46V38M106 46V38M60 20V32" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Capacitate mare · Membrană</p>
+        <h3 class="mdl-title">Carport cu structură de membrană</h3>
+        <p class="mdl-desc">Acoperiș din material textil tensionat, nu din panouri rigide — o soluție mai ușoară vizual, potrivită pentru spații publice sau semi-publice.</p>
+        <ul class="mdl-adv">
+          <li>Aspect ușor, modern, arhitectural</li>
+          <li>Potrivit și pentru zone pietonale sau biciclete</li>
+          <li>Alternativă distinctă față de structurile metalice</li>
+        </ul>
+        <p class="mdl-use"><strong>Recomandat pentru</strong>Campusuri, ansambluri rezidențiale sau spații publice unde forma contează.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════════════ -->
+<section id="final-cta" class="py">
+  <div class="wrap fc-inner">
+    <div>
+      <p class="fc-h serif">Nu ești sigur ce model ți se potrivește?</p>
+      <p class="fc-sub">Spune-ne câteva detalii despre teren și scop — îți recomandăm structura potrivită, gratuit, fără nicio obligație.</p>
+    </div>
+    <div class="fc-btns">
+      <a href="index.html#contact" class="btn btn-white">
+        Solicită recomandare gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:+40700000000" class="btn btn-outline-w">Sună acum</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap footer-main">
+    <div class="footer-cols">
+      <div style="grid-column:span 1">
+        <div class="footer-brand-logo">
+          <span class="fbl-name serif">Carport</span>
+          <span class="fbl-pro">Pro</span>
+        </div>
+        <p class="footer-brand-desc">Carporturi auto din aluminiu și metal, la comandă, montate profesionist în toată România.</p>
+        <a href="tel:+40700000000" class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          0700 000 000
+        </a>
+        <a href="mailto:contact@carportpro.ro" class="footer-contact-item">
+          <svg width="14" height="11" viewBox="0 0 17 13" fill="none"><rect x="1" y="1" width="15" height="11" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M1 3L8.5 8L16 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          contact@carportpro.ro
+        </a>
+      </div>
+      <div>
+        <p class="footer-col-head">Navigare</p>
+        <a href="index.html#products" class="footer-link">Produse</a>
+        <a href="modele.html" class="footer-link">Modele</a>
+        <a href="index.html#why-us" class="footer-link">De ce noi</a>
+        <a href="index.html#solar" class="footer-link">Fotovoltaic</a>
+        <a href="index.html#portfolio" class="footer-link">Proiecte</a>
+        <a href="index.html#contact" class="footer-link">Contact</a>
+      </div>
+      <div>
+        <p class="footer-col-head">Modele populare</p>
+        <a href="#modele-lista" class="footer-link">Carport monopantă</a>
+        <a href="#modele-lista" class="footer-link">Carport dublă pantă</a>
+        <a href="#modele-lista" class="footer-link">Carport cu stâlp central</a>
+        <a href="#modele-lista" class="footer-link">Carport pentru camioane</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">© <span id="year"></span> CarportPro România · Toate drepturile rezervate</p>
+        <div class="footer-legal">
+          <a href="index.html#">Politică de confidențialitate</a>
+          <a href="index.html#">Termeni și condiții</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="wa-float" href="https://wa.me/40700000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div id="mobile-sticky">
+  <a href="tel:+40700000000" class="ms-btn ms-btn-phone">
+    <svg width="14" height="14" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+    Sună acum
+  </a>
+  <a href="index.html#contact" class="ms-btn ms-btn-cta">
+    Solicită ofertă
+    <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+let menuOpen = false;
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  hamburger.innerHTML = menuOpen
+    ? '<svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 1L16 16M16 1L1 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    : '<svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    hamburger.innerHTML = '<svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+  });
+});
+
+// ── Model filter tabs ─────────────────────────────────────────────────────
+const mdlTabs = document.querySelectorAll('.mdl-tab');
+const mdlCards = document.querySelectorAll('.mdl-card');
+mdlTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    mdlTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    mdlCards.forEach(card => {
+      card.hidden = !(filter === 'toate' || card.dataset.cat === filter);
+    });
+  });
+});
+</script>
+</body>
+</html>

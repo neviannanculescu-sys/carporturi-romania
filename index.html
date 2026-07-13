@@ -171,6 +171,29 @@ section.py{padding:clamp(60px,8vw,110px) 0}
 
 .products-note{text-align:center;margin-top:28px;color:var(--ch-lt);font-size:12px;letter-spacing:.03em}
 
+/* ─── MODELE (STRUCTURI) ────────────────────────────────────────────────────── */
+#modele{background:var(--white)}
+.mdl-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}
+.mdl-sub{color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:320px}
+.mdl-note-top{color:var(--ch-lt);font-size:12px;line-height:1.7;max-width:640px;margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid var(--cream-md)}
+
+.mdl-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.mdl-tab{background:transparent;border:1px solid var(--cream-md);color:var(--ch-mid);font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;cursor:pointer;transition:all .15s}
+.mdl-tab:hover{border-color:var(--ch-lt)}
+.mdl-tab.active{background:var(--ch);border-color:var(--ch);color:#fff}
+
+.mdl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--cream-md);border:1px solid var(--cream-md)}
+.mdl-card{background:#fff;padding:clamp(20px,2.4vw,26px);display:flex;flex-direction:column;transition:opacity .2s}
+.mdl-card[hidden]{display:none}
+.mdl-icon{width:100%;height:56px;margin-bottom:18px;color:var(--bronze)}
+.mdl-tag{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:8px}
+.mdl-title{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ch);margin-bottom:8px;line-height:1.2}
+.mdl-desc{color:var(--ch-lt);font-size:12.5px;line-height:1.6;flex:1}
+
+.mdl-cta-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:40px;padding-top:32px;border-top:1px solid var(--cream-md)}
+.mdl-cta-note{color:var(--ch-lt);font-size:12px;line-height:1.6;max-width:420px}
+.mdl-cta-note a{color:var(--ch);text-decoration:underline;text-underline-offset:3px}
+
 /* ─── WHY US ────────────────────────────────────────────────────────────────── */
 #why-us{background:#fff}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:start}
@@ -403,6 +426,7 @@ footer{background:var(--ch);color:#fff}
       <!-- Desktop nav -->
       <nav class="nav-desktop">
         <a href="#products" class="nav-link">Produse</a>
+        <a href="#modele" class="nav-link">Modele</a>
         <a href="#amplasare" class="nav-link">Amplasare</a>
         <a href="#why-us" class="nav-link">De ce noi</a>
         <a href="#solar" class="nav-link">Fotovoltaic</a>
@@ -426,6 +450,7 @@ footer{background:var(--ch);color:#fff}
   <div class="mobile-menu" id="mobile-menu">
     <div class="wrap">
       <a href="#products" class="nav-link" style="display:block;padding:12px 0">Produse</a>
+      <a href="#modele" class="nav-link" style="display:block;padding:12px 0">Modele</a>
       <a href="#amplasare" class="nav-link" style="display:block;padding:12px 0">Amplasare</a>
       <a href="#why-us" class="nav-link" style="display:block;padding:12px 0">De ce noi</a>
       <a href="#solar" class="nav-link" style="display:block;padding:12px 0">Fotovoltaic</a>
@@ -691,6 +716,140 @@ footer{background:var(--ch);color:#fff}
     </div>
 
     <p class="products-note">Primești ofertă în funcție de dimensiuni și configurație &nbsp;·&nbsp; Consultanța este gratuită</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODELE (STRUCTURI)
+═══════════════════════════════════════════════════════════════ -->
+<section id="modele" class="py">
+  <div class="wrap">
+    <div class="mdl-header">
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Structuri disponibile</p>
+        <h2 class="serif" style="font-size:clamp(28px,4vw,52px);color:var(--ch);line-height:1.05;max-width:560px">12 tipuri de structură. O singură echipă care le execută pe toate.</h2>
+      </div>
+      <p class="mdl-sub">De la un simplu acoperiș pentru o mașină, până la structuri arhitecturale sau parcări pentru flote — alegi forma, noi ne ocupăm de rest.</p>
+    </div>
+
+    <p class="mdl-note-top">Toate structurile sunt construite din oțel zincat, aluminiu și elemente de fixare inox — aceleași materiale pe care le folosim în proiectele noastre curente. Diferența dintre modele e forma acoperișului și modul de sprijin, nu calitatea execuției.</p>
+
+    <div class="mdl-tabs" role="tablist" aria-label="Filtrează modelele de carport">
+      <button class="mdl-tab active" data-filter="toate">Toate (12)</button>
+      <button class="mdl-tab" data-filter="clasice">Clasice</button>
+      <button class="mdl-tab" data-filter="arhitectural">Design arhitectural</button>
+      <button class="mdl-tab" data-filter="compact">Ușoare &amp; compacte</button>
+      <button class="mdl-tab" data-filter="mare">Capacitate mare</button>
+    </div>
+
+    <div class="mdl-grid">
+
+      <!-- 1 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 50V22L106 10V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 50V38M106 50V10" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Monopantă</p>
+        <h3 class="mdl-title">Carport cu un singur versant</h3>
+        <p class="mdl-desc">Cea mai simplă și accesibilă structură. Un singur unghi de scurgere, montaj rapid, potrivită pentru curți mici sau bugete controlate.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 50V22L60 10L110 22V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 50V34M110 50V34M60 10V22" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Dublă pantă</p>
+        <h3 class="mdl-title">Carport cu două versante</h3>
+        <p class="mdl-desc">Formă simetrică, tip acoperiș clasic. Distribuie mai bine sarcina de zăpadă și se potrivește vizual cu casa, nu doar cu utilitatea ei.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 50V24C14 24 40 8 106 12V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M14 50V40M106 50V12" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Arcuit</p>
+        <h3 class="mdl-title">Carport arcuit cu un singur versant</h3>
+        <p class="mdl-desc">Aceeași funcționalitate ca monopanta clasică, într-o formă curbă și modernă — pentru cei care vor un aspect mai puțin „utilitar".</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="mdl-card" data-cat="clasice">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 50C10 50 10 26 10 24C30 8 90 8 110 24C110 26 110 50 110 50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 50V38M110 50V38" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Clasic · Arcuit simetric</p>
+        <h3 class="mdl-title">Carport arcuit cu două versante</h3>
+        <p class="mdl-desc">Varianta arcuită și simetrică, pentru proprietăți sau parcări unde aspectul arhitectural contează la fel de mult ca protecția oferită.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 24L110 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M60 24V50" stroke="currentColor" stroke-width="2"/><path d="M50 50H70" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Stâlp central</p>
+        <h3 class="mdl-title">Carport tip gol, cu stâlp central ușor</h3>
+        <p class="mdl-desc">Un singur stâlp central, discret, care eliberează spațiul din jurul mașinii. Potrivit pentru curți cu spațiu limitat de manevră.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 20H106" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M60 20V38M60 38L44 50M60 38L76 50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Stâlp ramificat</p>
+        <h3 class="mdl-title">Carport tip „creangă de copac"</h3>
+        <p class="mdl-desc">Un singur stâlp se ramifică precum o creangă, susținând acoperișul fără șiruri de coloane. Impact vizual puternic, pentru reședințe premium.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M10 22L35 44L60 22L85 44L110 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 22V50M110 22V50M60 22V32" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip W</p>
+        <h3 class="mdl-title">Carport cu două versante, tip W</h3>
+        <p class="mdl-desc">Module succesive în formă de W, gândite pentru șiruri lungi de locuri de parcare — sprijin eficient și un ritm vizual ordonat.</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M18 50V16L60 44L102 16V50" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip N</p>
+        <h3 class="mdl-title">Carport cu un singur versant, tip N</h3>
+        <p class="mdl-desc">Cadru înclinat, în formă de N, care combină rezistența structurală cu un profil vizual dinamic — potrivit pentru parcări comerciale.</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="mdl-card" data-cat="arhitectural">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 18H106" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30 18L60 44L90 18" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <p class="mdl-tag">Arhitectural · Tip V</p>
+        <h3 class="mdl-title">Carport cu un singur versant, tip V</h3>
+        <p class="mdl-desc">Stâlpi înclinați care se unesc în formă de V, susținând acoperișul dintr-un punct central. Aspect modern, potrivit pentru intrări reprezentative.</p>
+      </div>
+
+      <!-- 10 -->
+      <div class="mdl-card" data-cat="compact">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M20 48V28L100 20V48" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 48V40M100 48V22" stroke="currentColor" stroke-width="1.5"/></svg>
+        <p class="mdl-tag">Compact · Versant unic</p>
+        <h3 class="mdl-title">Carport ușor cu un singur versant</h3>
+        <p class="mdl-desc">Structură mai ușoară, potrivită pentru scutere, biciclete electrice sau vehicule ușoare. Cost redus, montaj simplu, ideal pentru puncte mici de încărcare.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="mdl-card" data-cat="mare">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M6 24L114 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 24V50M114 24V50" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Capacitate mare · Deschidere largă</p>
+        <h3 class="mdl-title">Carport pentru autocare și camioane</h3>
+        <p class="mdl-desc">Structură cu deschidere mare, calculată pentru vehicule comerciale sau flote. Fără stâlpi intermediari care să blocheze manevrele de intrare/ieșire.</p>
+      </div>
+
+      <!-- 12 -->
+      <div class="mdl-card" data-cat="mare">
+        <svg class="mdl-icon" viewBox="0 0 120 56" fill="none"><path d="M14 46C24 26 44 20 60 20C76 20 96 26 106 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 46V38M106 46V38M60 20V32" stroke="currentColor" stroke-width="2"/></svg>
+        <p class="mdl-tag">Capacitate mare · Membrană</p>
+        <h3 class="mdl-title">Carport cu structură de membrană</h3>
+        <p class="mdl-desc">Acoperiș din membrană tensionată, ușor și flexibil vizual. Potrivit pentru spații publice, campusuri sau ansambluri rezidențiale.</p>
+      </div>
+
+    </div>
+
+    <div class="mdl-cta-row">
+      <p class="mdl-cta-note">Nu știi ce structură se potrivește terenului tău? <a href="#contact">Trimite-ne detaliile</a> și îți recomandăm modelul potrivit — sau vezi mai jos cum poate fi orice model echipat cu <a href="#solar">panouri fotovoltaice</a>.</p>
+      <a href="#contact" class="btn btn-dark">
+        Cere consultanță pentru modelul potrivit
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1289,6 +1448,20 @@ mobileMenu.querySelectorAll('a').forEach(a => {
     menuOpen = false;
     mobileMenu.classList.remove('open');
     hamburger.innerHTML = '<svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+  });
+});
+
+// ── Model filter tabs ─────────────────────────────────────────────────────
+const mdlTabs = document.querySelectorAll('.mdl-tab');
+const mdlCards = document.querySelectorAll('.mdl-card');
+mdlTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    mdlTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    mdlCards.forEach(card => {
+      card.hidden = !(filter === 'toate' || card.dataset.cat === filter);
+    });
   });
 });
 

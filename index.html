@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Carporturi Auto la Comandă – Montaj Profesionist în România | CarportPro</title>
+<meta name="description" content="Carporturi din aluminiu și metal la comandă. Montaj profesionist în toată România. Soluții pentru 1–2 mașini, carport fotovoltaic și parcări comerciale. Ofertă gratuită în 24h."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"CarportPro România","description":"Carporturi auto din aluminiu și metal la comandă, montaj profesionist în toată România.","url":"https://carportpro.ro","telephone":"+40-700-000-000","email":"contact@carportpro.ro","address":{"@type":"PostalAddress","addressLocality":"București","addressRegion":"Ilfov","addressCountry":"RO"},"areaServed":{"@type":"Country","name":"România"},"priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}]}
+</script>
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Jost',system-ui,sans-serif;background:#F7F5F1;color:#1C1C1A;-webkit-font-smoothing:antialiased;line-height:1.65}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit}
+
+/* ─── DESIGN TOKENS ────────────────────────────────────────────────────────── */
+:root{
+  --ch:#1C1C1A;       /* charcoal */
+  --ch-mid:#3A3A38;
+  --ch-lt:#6A6A68;
+  --bronze:#8B6B3A;
+  --bronze-lt:#B08A52;
+  --forest:#2C4A1E;
+  --cream:#F7F5F1;
+  --cream-dk:#EDE9E2;
+  --cream-md:#E2DDD5;
+  --white:#FFFFFF;
+  --r-sm:0px;
+  --shadow-card:0 1px 3px rgba(0,0,0,0.06),0 1px 1px rgba(0,0,0,0.04);
+}
+
+/* ─── TYPOGRAPHY ───────────────────────────────────────────────────────────── */
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400}
+
+/* ─── LAYOUT ───────────────────────────────────────────────────────────────── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 40px}}
+@media(min-width:1200px){.wrap{padding:0 48px}}
+
+section.py{padding:clamp(60px,8vw,110px) 0}
+
+/* ─── RULE ─────────────────────────────────────────────────────────────────── */
+.rule{display:block;width:40px;height:1px;background:var(--ch-lt);margin-bottom:22px}
+.rule-w{display:block;width:40px;height:1px;background:rgba(255,255,255,0.3);margin-bottom:22px}
+
+/* ─── LABEL TAG ────────────────────────────────────────────────────────────── */
+.lbl{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:14px;display:block}
+.lbl-w{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;display:block}
+
+/* ─── BUTTONS ──────────────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:all .2s;white-space:nowrap;border:none}
+.btn:active{transform:scale(.98)}
+
+.btn-dark{@extend .btn;background:var(--ch);color:#fff;padding:14px 26px}
+.btn-dark:hover{background:var(--ch-mid)}
+
+.btn-outline{background:transparent;border:1px solid var(--ch);color:var(--ch);padding:13px 25px}
+.btn-outline:hover{background:var(--ch);color:#fff}
+
+.btn-outline-w{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;padding:14px 26px}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+.btn-white{background:#fff;color:var(--ch);padding:14px 26px}
+.btn-white:hover{background:var(--cream)}
+
+.btn-bronze{background:var(--bronze);color:#fff;padding:14px 26px}
+.btn-bronze:hover{background:#6B5028}
+
+/* Shared btn font settings */
+.btn,.btn-dark,.btn-outline,.btn-outline-w,.btn-white,.btn-bronze{
+  font-family:'Jost',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;
+  transition:all .2s;white-space:nowrap;cursor:pointer;
+}
+.btn-dark:active,.btn-outline:active,.btn-outline-w:active,.btn-white:active,.btn-bronze:active{transform:scale(.98)}
+
+/* ─── HEADER ───────────────────────────────────────────────────────────────── */
+#header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  transition:background .3s,box-shadow .3s;
+  background:transparent;
+}
+#header.scrolled{background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+
+.logo{display:flex;align-items:baseline;gap:4px}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ch);font-weight:400}
+.logo-pro{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+
+.nav-desktop{display:flex;gap:30px;align-items:center}
+.nav-link{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ch-mid);transition:color .15s}
+.nav-link:hover{color:var(--ch)}
+
+.hamburger{display:none;background:none;border:none;padding:8px;color:var(--ch)}
+.mobile-menu{display:none;background:#fff;border-top:1px solid var(--cream-md);padding:20px 0 28px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ch);padding:12px 0}
+
+@media(max-width:767px){
+  .nav-desktop{display:none}
+  #header-cta-desktop{display:none}
+  .hamburger{display:block}
+}
+
+/* ─── HERO ─────────────────────────────────────────────────────────────────── */
+#hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:flex-end;overflow:hidden;background:var(--ch);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('images/carport-05-structura-completa.jpg');
+  background-size:cover;background-position:center;
+}
+.hero-ov1{position:absolute;inset:0;background:rgba(18,18,16,.52)}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,12,.96) 0%,rgba(14,14,12,.2) 60%,transparent 100%)}
+
+.hero-content{position:relative;padding-bottom:clamp(60px,8vw,96px);padding-top:120px}
+.hero-lbl{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px}
+.hero-h1{font-family:'Cormorant Garamond',serif;color:#fff;font-size:clamp(36px,6vw,72px);font-weight:400;line-height:1.06;max-width:680px;margin-bottom:24px}
+.hero-h1 em{color:var(--bronze-lt);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.65);font-size:clamp(15px,1.8vw,18px);font-weight:300;line-height:1.65;max-width:500px;margin-bottom:38px}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:52px}
+
+.hero-benefits{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:28px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;
+}
+.hero-benefit{display:flex;align-items:center;gap:10px}
+.hero-benefit-check{color:var(--bronze-lt);flex-shrink:0;font-size:11px}
+.hero-benefit-text{color:rgba(255,255,255,.7);font-size:12px;font-weight:300;letter-spacing:.02em}
+
+/* ─── TRUST ────────────────────────────────────────────────────────────────── */
+#trust{background:#fff}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:start}
+@media(max-width:900px){.trust-grid{grid-template-columns:1fr}}
+
+.trust-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);color:var(--ch);line-height:1.1;max-width:400px;margin-bottom:20px}
+.trust-desc{color:var(--ch-lt);font-size:14px;line-height:1.7;max-width:340px;margin-bottom:32px}
+.trust-benefits{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+@media(max-width:500px){.trust-benefits{grid-template-columns:1fr}}
+.tb{border-top:1px solid var(--cream-md);padding-top:20px}
+.tb-title{font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ch);margin-bottom:8px}
+.tb-text{color:var(--ch-lt);font-size:13px;line-height:1.65}
+
+/* ─── PRODUCTS ─────────────────────────────────────────────────────────────── */
+#products{background:var(--cream)}
+.products-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:52px}
+.products-sub{color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:280px}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background:var(--cream-md)}
+.pc{background:#fff;display:flex;flex-direction:column}
+.pc-img{position:relative;padding-bottom:65%;overflow:hidden;background:var(--cream-dk)}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.pc:hover .pc-img img{transform:scale(1.04)}
+.pc-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ch);padding:5px 10px;backdrop-filter:blur(4px)}
+.pc-body{flex:1;padding:clamp(20px,3vw,28px);border-top:1px solid var(--cream-md);display:flex;flex-direction:column}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ch);margin-bottom:10px}
+.pc-desc{color:var(--ch-lt);font-size:13px;line-height:1.65;margin-bottom:18px;flex:1}
+.pc-benefits{list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:7px}
+.pc-benefits li{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--ch-mid)}
+.pc-benefits li::before{content:'✓';color:var(--bronze);font-size:11px;flex-shrink:0;font-weight:700}
+
+.products-note{text-align:center;margin-top:28px;color:var(--ch-lt);font-size:12px;letter-spacing:.03em}
+
+/* ─── WHY US ────────────────────────────────────────────────────────────────── */
+#why-us{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:start}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+
+.why-img-wrap{position:relative;padding-bottom:118%;overflow:hidden;background:var(--cream-dk)}
+.why-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.why-quote{position:absolute;bottom:0;left:0;right:0;padding:32px;background:linear-gradient(to top,rgba(14,14,12,.92),transparent)}
+.why-quote p{font-family:'Cormorant Garamond',serif;color:#fff;font-size:clamp(16px,2vw,20px);font-style:italic;line-height:1.45}
+
+.why-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);color:var(--ch);line-height:1.1;margin-bottom:12px}
+.why-intro{color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:340px;margin-bottom:36px}
+
+.why-items{display:flex;flex-direction:column}
+.wi{display:flex;gap:20px;border-top:1px solid var(--cream-dk);padding:22px 0}
+.wi-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream-md);line-height:1;flex-shrink:0;min-width:36px;user-select:none}
+.wi-title{font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ch);margin-bottom:6px}
+.wi-text{color:var(--ch-lt);font-size:13px;line-height:1.65}
+
+/* ─── SOLAR ────────────────────────────────────────────────────────────────── */
+#solar{position:relative;background:var(--ch);overflow:hidden}
+.solar-bg{position:absolute;inset:0;background-image:url('images/carport-02-vedere-larga.jpg');background-size:cover;background-position:center;opacity:.18}
+.solar-ov{position:absolute;inset:0;background:rgba(18,18,16,.78)}
+.solar-content{position:relative}
+.solar-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:start}
+@media(max-width:900px){.solar-grid{grid-template-columns:1fr}}
+
+.solar-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,52px);color:#fff;line-height:1.08;margin-bottom:22px;max-width:440px}
+.solar-h2 em{color:var(--bronze-lt);font-style:normal}
+.solar-desc{color:rgba(255,255,255,.6);font-size:14px;line-height:1.7;max-width:380px;margin-bottom:36px}
+
+.sf{border-top:1px solid rgba(255,255,255,.1);padding:22px 0}
+.sf-title{font-weight:600;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.sf-text{color:rgba(255,255,255,.55);font-size:13px;line-height:1.65}
+
+/* ─── PROCESS ──────────────────────────────────────────────────────────────── */
+#process{background:var(--cream)}
+.process-hdr{text-align:center;margin-bottom:56px}
+.process-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,52px);color:var(--ch);line-height:1.1}
+
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--cream-md)}
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.steps-grid{grid-template-columns:1fr}}
+
+.step{background:var(--cream);padding:clamp(20px,3vw,32px) clamp(16px,2.5vw,28px)}
+.step-num{width:52px;height:52px;border:1px solid var(--cream-md);background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step-num span{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--ch)}
+.step-title{font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ch);margin-bottom:10px}
+.step-text{color:var(--ch-lt);font-size:13px;line-height:1.65}
+
+.process-foot{text-align:center;margin-top:44px}
+.process-note{color:var(--ch-lt);font-size:11px;margin-top:12px;letter-spacing:.03em}
+
+/* ─── PORTFOLIO ────────────────────────────────────────────────────────────── */
+#portfolio{background:#fff}
+.portfolio-hdr{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px}
+.portfolio-note{color:var(--ch-lt);font-size:11px;max-width:260px;line-height:1.6}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+@media(max-width:640px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+.gi{position:relative;overflow:hidden;background:var(--cream-dk);cursor:pointer}
+.gi::after{content:'';display:block;padding-bottom:70%}
+.gi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gi:hover img{transform:scale(1.05)}
+.gi-ov{position:absolute;inset:0;background:rgba(14,14,12,.78);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+.gi:hover .gi-ov{opacity:1}
+.gi-type{color:#fff;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.gi-loc{color:rgba(255,255,255,.55);font-size:10px}
+
+/* ─── TESTIMONIALS ─────────────────────────────────────────────────────────── */
+#testimonials{background:var(--cream)}
+.test-grid{display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,5vw,80px);align-items:start}
+@media(max-width:900px){.test-grid{grid-template-columns:1fr}}
+
+.test-nav{display:flex;gap:10px;align-items:center;margin-top:32px}
+.test-dot{height:2px;border:none;cursor:pointer;padding:0;background:var(--cream-md);transition:width .3s,background .3s}
+.test-dot.active{background:var(--ch)}
+
+.test-card{background:#fff;padding:clamp(24px,4vw,48px);border-top:2px solid var(--ch)}
+.test-q{color:var(--cream-md);margin-bottom:18px;font-size:28px;line-height:1;user-select:none}
+.test-text{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);color:var(--ch);font-style:italic;line-height:1.5;margin-bottom:28px}
+.test-divider{border:none;border-top:1px solid var(--cream-md);margin-bottom:18px}
+.test-name{font-weight:600;font-size:13px;color:var(--ch);letter-spacing:.04em}
+.test-detail{color:var(--ch-lt);font-size:12px;margin-top:3px}
+
+.test-list{display:flex;flex-direction:column;margin-top:3px;gap:1px}
+.test-list-item{text-align:left;padding:11px 14px;background:transparent;border:none;cursor:pointer;transition:background .15s;border-bottom:1px solid var(--cream-dk);width:100%}
+.test-list-item:hover,.test-list-item.active{background:#fff}
+.test-list-item .tln{font-weight:600;font-size:12px;color:var(--ch);letter-spacing:.04em}
+.test-list-item .tld{color:var(--ch-lt);font-size:11px;margin-left:8px}
+
+/* ─── FAQ ──────────────────────────────────────────────────────────────────── */
+#faq{background:#fff}
+.faq-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:clamp(40px,5vw,80px);align-items:start}
+@media(max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+.faq-list{border-top:1px solid var(--cream-md)}
+.faq-item{border-bottom:1px solid var(--cream-md)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:14px;text-align:left;background:none;border:none;cursor:pointer}
+.faq-q-text{font-size:14px;color:var(--ch-mid);line-height:1.4;transition:color .15s}
+.faq-q:hover .faq-q-text,.faq-item.open .faq-q-text{color:var(--ch)}
+.faq-item.open .faq-q-text{font-weight:600}
+.faq-icon{flex-shrink:0;color:var(--ch-lt);font-size:18px;line-height:1;transition:transform .3s}
+.faq-answer{overflow:hidden;max-height:0;opacity:0;transition:max-height .35s ease,opacity .3s ease}
+.faq-item.open .faq-answer{max-height:300px;opacity:1}
+.faq-answer p{color:var(--ch-lt);font-size:13px;line-height:1.7;padding-bottom:20px;padding-right:28px}
+
+/* ─── CONTACT ──────────────────────────────────────────────────────────────── */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,5vw,80px);align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+.contact-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,44px);color:var(--ch);line-height:1.1;margin-bottom:14px}
+.contact-desc{color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:320px;margin-bottom:6px}
+.contact-hours{color:var(--ch-lt);font-size:11px;letter-spacing:.03em;margin-bottom:32px}
+
+.qc{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.qc-icon{width:40px;height:40px;border:1px solid var(--cream-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qc-lbl{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:2px}
+.qc-val{font-weight:600;font-size:13px;color:var(--ch)}
+
+.form-box{background:#fff;padding:clamp(22px,4vw,40px)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-bottom:18px}
+.form-lbl{display:block;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:8px}
+.form-inp{
+  width:100%;background:#fff;border:1px solid var(--cream-md);
+  padding:13px 14px;font-size:13px;color:var(--ch);
+  font-family:'Jost',sans-serif;outline:none;
+  transition:border-color .15s;
+}
+.form-inp:focus{border-color:var(--ch)}
+.form-inp::placeholder{color:rgba(106,106,104,.5)}
+select.form-inp{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' fill='none'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%236A6A68' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;
+  -webkit-appearance:none;appearance:none;padding-right:36px;
+}
+textarea.form-inp{resize:none;line-height:1.6}
+.form-submit{width:100%;justify-content:center;font-size:11px;margin-bottom:12px}
+.form-note{color:var(--ch-lt);font-size:11px;text-align:center;letter-spacing:.03em}
+.form-success{background:#fff;padding:48px;border-top:2px solid var(--ch);display:flex;flex-direction:column;gap:14px}
+.form-success-icon{font-size:28px;color:var(--forest)}
+.form-success h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--ch)}
+.form-success p{color:var(--ch-lt);font-size:14px;line-height:1.7}
+
+/* ─── FOOTER ───────────────────────────────────────────────────────────────── */
+footer{background:var(--ch);color:#fff}
+.footer-cta-bar{border-bottom:1px solid rgba(255,255,255,.08);padding:clamp(28px,4vw,40px) 0}
+.footer-cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.footer-cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);color:#fff;margin-bottom:4px}
+.footer-cta-sub{color:rgba(255,255,255,.4);font-size:12px}
+
+.footer-main{padding:56px 0 40px}
+.footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(28px,4vw,48px)}
+.footer-col-head{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
+.footer-link{display:block;color:rgba(255,255,255,.55);font-size:12px;line-height:2.1;transition:color .15s}
+.footer-link:hover{color:#fff}
+.footer-text{color:rgba(255,255,255,.45);font-size:12px;line-height:2.1}
+
+.footer-brand-logo{display:flex;align-items:baseline;gap:4px;margin-bottom:12px}
+.fbl-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff}
+.fbl-pro{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-lt)}
+.footer-brand-desc{color:rgba(255,255,255,.4);font-size:12px;line-height:1.7;margin-bottom:18px}
+
+.footer-contact-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.55);font-size:12px;margin-bottom:8px;transition:color .15s}
+.footer-contact-item:hover{color:#fff}
+
+.footer-bottom{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-seo{color:rgba(255,255,255,.22);font-size:11px;line-height:1.7;max-width:680px;margin-bottom:18px}
+.footer-bottom-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.footer-copy{color:rgba(255,255,255,.2);font-size:11px}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{color:rgba(255,255,255,.2);font-size:11px;transition:color .15s}
+.footer-legal a:hover{color:rgba(255,255,255,.5)}
+
+/* ─── FLOATING CTA ─────────────────────────────────────────────────────────── */
+#wa-float{
+  position:fixed;bottom:28px;right:24px;z-index:50;
+  background:#25D366;color:#fff;
+  width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,.35);
+  transition:transform .2s,box-shadow .2s;
+}
+#wa-float:hover{transform:scale(1.07);box-shadow:0 6px 22px rgba(37,211,102,.5)}
+
+#mobile-sticky{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;
+  background:#fff;border-top:1px solid var(--cream-md);
+  box-shadow:0 -2px 12px rgba(0,0,0,.08);
+}
+.ms-btn{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  gap:8px;padding:16px;font-family:'Jost',sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;transition:background .15s;
+}
+.ms-btn-phone{color:var(--ch);border-right:1px solid var(--cream-md)}
+.ms-btn-phone:hover{background:var(--cream)}
+.ms-btn-cta{background:var(--ch);color:#fff}
+.ms-btn-cta:hover{background:var(--ch-mid)}
+
+@media(max-width:767px){
+  #wa-float{display:none}
+  #mobile-sticky{display:flex}
+  body{padding-bottom:58px}
+}
+
+/* ─── UTILITY ──────────────────────────────────────────────────────────────── */
+.icon-arrow{display:inline-flex;align-items:center}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════════════ -->
+<header id="header">
+  <div class="wrap">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo-name">Carport</span>
+        <span class="logo-pro">Pro</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav-desktop">
+        <a href="#products" class="nav-link">Produse</a>
+        <a href="#amplasare" class="nav-link">Amplasare</a>
+        <a href="#why-us" class="nav-link">De ce noi</a>
+        <a href="#solar" class="nav-link">Fotovoltaic</a>
+        <a href="#portfolio" class="nav-link">Proiecte</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#contact" id="header-cta-desktop" class="btn btn-dark" style="font-size:10px;padding:11px 22px">
+        Ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Meniu">
+        <svg id="ham-icon" width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="#products" class="nav-link" style="display:block;padding:12px 0">Produse</a>
+      <a href="#amplasare" class="nav-link" style="display:block;padding:12px 0">Amplasare</a>
+      <a href="#why-us" class="nav-link" style="display:block;padding:12px 0">De ce noi</a>
+      <a href="#solar" class="nav-link" style="display:block;padding:12px 0">Fotovoltaic</a>
+      <a href="#portfolio" class="nav-link" style="display:block;padding:12px 0">Proiecte</a>
+      <a href="#contact" class="nav-link" style="display:block;padding:12px 0">Contact</a>
+      <a href="#contact" class="btn btn-dark" style="margin-top:16px;display:inline-flex">
+        Solicită ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov1"></div>
+  <div class="hero-ov2"></div>
+
+  <div class="wrap hero-content">
+    <p class="hero-lbl">Carporturi Auto — Soluții Premium din Aluminiu &amp; Metal</p>
+
+    <h1 class="hero-h1 serif">
+      Protecție elegantă<br/>
+      pentru mașina ta.<br/>
+      <em>Construită să dureze.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Carporturi din aluminiu și metal galvanizat, personalizate pe dimensiunile și stilul casei tale.
+      Montaj profesionist în București, Ilfov și toată România.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-white">
+        Solicită ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#products" class="btn btn-outline-w">
+        Descoperă modelele
+      </a>
+    </div>
+
+    <div class="hero-benefits">
+      <div class="hero-benefit"><span class="hero-benefit-check">✓</span><span class="hero-benefit-text">Montaj în toată România</span></div>
+      <div class="hero-benefit"><span class="hero-benefit-check">✓</span><span class="hero-benefit-text">Personalizare la comandă</span></div>
+      <div class="hero-benefit"><span class="hero-benefit-check">✓</span><span class="hero-benefit-text">Structuri rezistente 20+ ani</span></div>
+      <div class="hero-benefit"><span class="hero-benefit-check">✓</span><span class="hero-benefit-text">Consultanță gratuită</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TRUST
+═══════════════════════════════════════════════════════════════ -->
+<section id="trust" class="py">
+  <div class="wrap">
+    <div class="trust-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">De ce un carport</p>
+        <h2 class="trust-h2 serif">Mai eficient decât un garaj. Mai inteligent decât o improvizație.</h2>
+        <p class="trust-desc">
+          Un carport modern din aluminiu sau metal galvanizat oferă protecție completă pentru mașina ta
+          fără costurile și birocrația unui garaj clasic. Instalare rapidă, design curat, valoare adăugată proprietății.
+        </p>
+        <a href="#contact" class="btn btn-dark">
+          Solicită ofertă gratuită
+          <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: 4 benefits -->
+      <div class="trust-benefits">
+        <div class="tb">
+          <div class="tb-title">Cost de 2–3× mai mic</div>
+          <p class="tb-text">Față de un garaj zidit, un carport premium costă semnificativ mai puțin — fără fundație masivă, fără zidărie, fără finisaje interioare obligatorii.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Montaj în 1–2 zile</div>
+          <p class="tb-text">Nu ai nevoie de autorizație de construcție în cele mai multe cazuri. Instalăm rapid, fără șantier prelungit și fără deranj în curte.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Design care se integrează</div>
+          <p class="tb-text">Linii curate din aluminiu sau metal vopsit se potrivesc perfect cu o casă modernă. Nu blochează vederea, nu ocupă vizual spațiul.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Protecție serioasă</div>
+          <p class="tb-text">Rezistă la ploaie, grindină, zăpadă și UV. Structura e dimensionată pentru condițiile climatice din România și are garanție de material.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     AMPLASARE — CARPORT SEPARAT DE CASĂ
+═══════════════════════════════════════════════════════════════ -->
+<section id="amplasare" class="py" style="background:var(--white)">
+  <div class="wrap">
+    <div class="trust-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Un detaliu adesea ignorat</p>
+        <h2 class="trust-h2 serif">Distanță inteligentă față de casă.<br/>Protecție reală pentru mașină.</h2>
+        <p class="trust-desc">
+          Zona acoperișului unei case adună, în timp, frunze, praf, cuiburi de păsări și alte materiale greu de controlat complet,
+          iar unele porțiuni de streașină pot fi mai puțin ventilate. Un carport amplasat separat poate fi o alegere mai prudentă
+          în astfel de situații — fără să renunți la protecția reală împotriva soarelui, ploii sau grindinei.
+        </p>
+        <a href="#contact" class="btn btn-dark">
+          Solicită evaluare gratuită a amplasării
+          <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: 4 benefits -->
+      <div class="trust-benefits">
+        <div class="tb">
+          <div class="tb-title">Mai puțină expunere</div>
+          <p class="tb-text">Distanțarea față de zona acoperișului poate limita expunerea directă la resturi uscate, cuiburi de păsări sau zone insuficient ventilate.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Fără compromis pe protecție</div>
+          <p class="tb-text">Rezistă la fel de bine la soare, ploaie, grindină și zăpadă — diferența e doar în poziționare, nu în materiale.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Fațadă neîncărcată</div>
+          <p class="tb-text">Nu se lipește de zona principală a casei, deci nu îi afectează vizual sau funcțional aspectul.</p>
+        </div>
+        <div class="tb">
+          <div class="tb-title">Amplasare pe măsura terenului</div>
+          <p class="tb-text">Poziționăm structura exact acolo unde are sens pentru curtea ta, independent de configurația acoperișului.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PRODUCTS
+═══════════════════════════════════════════════════════════════ -->
+<section id="products" class="py">
+  <div class="wrap">
+    <div class="products-header">
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Soluțiile noastre</p>
+        <h2 class="serif" style="font-size:clamp(28px,4vw,52px);color:var(--ch);line-height:1.05;max-width:500px">Carport pentru fiecare situație și stil</h2>
+      </div>
+      <p class="products-sub">De la o singură mașină la parcări private pentru firme — toate la comandă, toate montate de echipa noastră.</p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Card 1 -->
+      <div class="pc">
+        <div class="pc-img">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--cream-dk);color:var(--ch-lt);font-size:11px;letter-spacing:.05em;text-align:center;padding:20px">Poză proiect în curând</div>
+          <span class="pc-badge">Rezidențial</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title serif">Carport 1 Mașină</h3>
+          <p class="pc-desc">Soluția perfectă pentru un singur autoturism. Structură compactă, rezistentă, cu design curat care se integrează în orice stil de curte.</p>
+          <ul class="pc-benefits">
+            <li>Dimensiuni personalizate</li>
+            <li>Structură aluminiu sau metal</li>
+            <li>Montaj rapid, 1 zi</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="align-self:flex-start;font-size:10px;padding:10px 18px">
+            Cere ofertă
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pc">
+        <div class="pc-img">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--cream-dk);color:var(--ch-lt);font-size:11px;letter-spacing:.05em;text-align:center;padding:20px">Poză proiect în curând</div>
+          <span class="pc-badge">Rezidențial</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title serif">Carport 2 Mașini</h3>
+          <p class="pc-desc">Capacitate dublă, același standard premium. Ideal pentru familii cu două mașini sau proprietăți unde spațiul permite o soluție mai generoasă.</p>
+          <ul class="pc-benefits">
+            <li>Acoperire 6×6m standard</li>
+            <li>Coloane antracit sau alb</li>
+            <li>Poate include panouri laterale</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="align-self:flex-start;font-size:10px;padding:10px 18px">
+            Cere ofertă
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pc">
+        <div class="pc-img">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--cream-dk);color:var(--ch-lt);font-size:11px;letter-spacing:.05em;text-align:center;padding:20px">Poză proiect în curând</div>
+          <span class="pc-badge">Premium</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title serif">Carport la Comandă</h3>
+          <p class="pc-desc">Dimensiuni nestandard, forme speciale, integrare în fațadă sau zid existent. Orice configurație este posibilă — proiectăm și executăm.</p>
+          <ul class="pc-benefits">
+            <li>Orice dimensiune și formă</li>
+            <li>Integrare arhitecturală</li>
+            <li>Design pe cerințele tale</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="align-self:flex-start;font-size:10px;padding:10px 18px">
+            Cere ofertă
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="images/carport-01-santier-innorat.jpg" alt="Parcare privată Phoenix Cernica – structură carport fotovoltaic" loading="lazy"/>
+          <span class="pc-badge">Eco &amp; Smart</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title serif">Carport Fotovoltaic</h3>
+          <p class="pc-desc">Structura carportului devine suport pentru panouri solare. Protecție auto + producție de energie — aceeași investiție, dublu beneficiu.</p>
+          <ul class="pc-benefits">
+            <li>Integrare panouri fotovoltaice</li>
+            <li>Reduce factura la energie</li>
+            <li>Rezidențial și business</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="align-self:flex-start;font-size:10px;padding:10px 18px">
+            Cere ofertă
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="pc">
+        <div class="pc-img">
+          <img src="images/carport-03-cu-utilaj.jpg" alt="Parcare privată Phoenix Cernica – 60 locuri" loading="lazy"/>
+          <span class="pc-badge">B2B</span>
+        </div>
+        <div class="pc-body">
+          <h3 class="pc-title serif">Carport Firme &amp; Parcări</h3>
+          <p class="pc-desc">Soluții pentru parcări private, showroom-uri, pensiuni și dezvoltatori imobiliari. Capacitate mare, montaj rapid, aspect profesionist.</p>
+          <ul class="pc-benefits">
+            <li>Soluții multi-loc</li>
+            <li>Proiecte la cheie</li>
+            <li>Termen și preț garantat</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="align-self:flex-start;font-size:10px;padding:10px 18px">
+            Cere ofertă
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="products-note">Primești ofertă în funcție de dimensiuni și configurație &nbsp;·&nbsp; Consultanța este gratuită</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHY US
+═══════════════════════════════════════════════════════════════ -->
+<section id="why-us" class="py">
+  <div class="wrap">
+    <div class="why-grid">
+      <!-- Image -->
+      <div>
+        <div class="why-img-wrap">
+          <img src="images/carport-04-montaj-scara.jpg" alt="Montaj structură – Parcare privată Phoenix Cernica" loading="lazy"/>
+          <div class="why-quote">
+            <p>„Nu vindem structuri. Oferim soluții complete, de la măsurare până la predare."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">De ce noi</p>
+        <h2 class="why-h2 serif">Ce ne diferențiază cu adevărat</h2>
+        <p class="why-intro">Lucrăm cu proprietari de case, arhitecți și companii care nu acceptă compromisuri.</p>
+
+        <div class="why-items">
+          <div class="wi">
+            <span class="wi-num">01</span>
+            <div>
+              <div class="wi-title">Consultanță înainte de ofertă</div>
+              <p class="wi-text">Venim la tine, măsurăm, evaluăm amplasarea, îți explicăm toate opțiunile. Fără costuri, fără obligații. Vrem să înțelegi exact ce cumperi.</p>
+            </div>
+          </div>
+          <div class="wi">
+            <span class="wi-num">02</span>
+            <div>
+              <div class="wi-title">Soluții pe dimensiunile tale</div>
+              <p class="wi-text">Nu avem „modele standard". Fiecare carport este proiectat și fabricat pe dimensiunile tale exacte — dimensiune, material, finisaj, culoare RAL.</p>
+            </div>
+          </div>
+          <div class="wi">
+            <span class="wi-num">03</span>
+            <div>
+              <div class="wi-title">Materiale cu garanție</div>
+              <p class="wi-text">Aluminiu anodizat sau vopsit electrostatic, oțel zincat la cald, elemente de fixare inox. Rezistă 20–30 ani cu întreținere minimă.</p>
+            </div>
+          </div>
+          <div class="wi">
+            <span class="wi-num">04</span>
+            <div>
+              <div class="wi-title">Montaj propriu, nu subcontractare</div>
+              <p class="wi-text">Echipa noastră execută instalarea. Știm exact cum se montează ce vindem — nu externalizăm responsabilitatea.</p>
+            </div>
+          </div>
+          <div class="wi">
+            <span class="wi-num">05</span>
+            <div>
+              <div class="wi-title">Ofertă în 24–48 ore</div>
+              <p class="wi-text">Primești o ofertă detaliată cu prețuri clare și termene reale. Fără așteptare inutilă. Răspundem rapid solicitărilor.</p>
+            </div>
+          </div>
+          <div class="wi">
+            <span class="wi-num">06</span>
+            <div>
+              <div class="wi-title">Suport tehnic post-vânzare</div>
+              <p class="wi-text">Dacă ai o întrebare sau o problemă după montaj, suntem disponibili. Nu dispărem după livrare.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-dark" style="margin-top:20px">
+          Discutăm proiectul tău
+          <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SOLAR
+═══════════════════════════════════════════════════════════════ -->
+<section id="solar" class="py">
+  <div class="solar-bg"></div>
+  <div class="solar-ov"></div>
+  <div class="wrap solar-content">
+    <div class="solar-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule-w"></span>
+        <p class="lbl-w">Carport Fotovoltaic</p>
+        <h2 class="solar-h2 serif">
+          Protejează mașina.<br/>
+          <em>Produce energie.</em><br/>
+          Aceeași structură.
+        </h2>
+        <p class="solar-desc">
+          Un carport fotovoltaic este o investiție inteligentă: acoperișul structurii devine câmp de panouri solare,
+          producând energie electrică pentru casa sau afacerea ta.
+        </p>
+        <a href="#contact" class="btn btn-bronze">
+          Solicită consultanță fotovoltaică
+          <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: features -->
+      <div>
+        <div class="sf">
+          <div class="sf-title">Protecție completă pentru mașină</div>
+          <p class="sf-text">Acoperire solidă împotriva ploii, zăpezii, grindinei și razelor UV — structura servește dublu scop fără compromis pe niciun front.</p>
+        </div>
+        <div class="sf">
+          <div class="sf-title">Producție de energie fotovoltaică</div>
+          <p class="sf-text">4–8 kWp pentru un carport de 2 mașini, în funcție de configurație. Suficient pentru o parte semnificativă din consumul casei.</p>
+        </div>
+        <div class="sf">
+          <div class="sf-title">Spațiu utilizat la maximum</div>
+          <p class="sf-text">Aceeași suprafață de teren servește două scopuri: parcare protejată + câmp fotovoltaic. Zero teren suplimentar.</p>
+        </div>
+        <div class="sf">
+          <div class="sf-title">Eligibil programul Casa Verde</div>
+          <p class="sf-text">Investiția poate fi parțial subvenționată prin programe guvernamentale. Te ajutăm cu documentația necesară.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROCESS
+═══════════════════════════════════════════════════════════════ -->
+<section id="process" class="py">
+  <div class="wrap">
+    <div class="process-hdr">
+      <span class="rule" style="margin:0 auto 22px"></span>
+      <p class="lbl" style="text-align:center">Cum lucrăm</p>
+      <h2 class="process-h2 serif">Un proces simplu. Fără surprize.</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num"><span>1</span></div>
+        <div class="step-title">Trimiți cererea</div>
+        <p class="step-text">Completezi formularul sau ne suni. Câteva detalii despre locație, dimensiuni aproximative și tipul de carport dorit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span>2</span></div>
+        <div class="step-title">Discutăm detaliile</div>
+        <p class="step-text">Venim sau discutăm telefonic despre amplasare, dimensiuni exacte, opțiuni de materiale și finisaje disponibile.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span>3</span></div>
+        <div class="step-title">Primești oferta</div>
+        <p class="step-text">În 24–48h primești ofertă detaliată cu preț, termene și specificații tehnice. Totul clar, fără costuri ascunse.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span>4</span></div>
+        <div class="step-title">Confirmăm execuția</div>
+        <p class="step-text">La acceptare, stabilim data de fabricație și montaj. Plata în tranșe clare, convenite la contract.</p>
+      </div>
+      <div class="step">
+        <div class="step-num"><span>5</span></div>
+        <div class="step-title">Livrare și instalare</div>
+        <p class="step-text">Echipa noastră montează carportul la cheie. Predăm curat, verificăm împreună, pleci mulțumit.</p>
+      </div>
+    </div>
+
+    <div class="process-foot">
+      <a href="#contact" class="btn btn-dark">
+        Trimite cererea acum
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="process-note">Răspundem rapid — luni–vineri, 9:00–18:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PORTFOLIO
+═══════════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="py">
+  <div class="wrap">
+    <div class="portfolio-hdr">
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Proiecte realizate</p>
+        <h2 class="serif" style="font-size:clamp(28px,4vw,52px);color:var(--ch);line-height:1.1">Exemple din portofoliu</h2>
+      </div>
+      <p class="portfolio-note">✦ Proiect real din portofoliul nostru, aflat în execuție.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gi">
+        <img src="images/carport-05-structura-completa.jpg" alt="Parcare privată Phoenix Cernica – vedere generală" loading="lazy"/>
+        <div class="gi-ov">
+          <p class="gi-type">Parcare privată Phoenix Cernica</p>
+          <p class="gi-loc">Comercial · 60 locuri</p>
+        </div>
+      </div>
+      <div class="gi">
+        <img src="images/carport-02-vedere-larga.jpg" alt="Parcare privată Phoenix Cernica – structură completă" loading="lazy"/>
+        <div class="gi-ov">
+          <p class="gi-type">Structură completă, 60 locuri</p>
+          <p class="gi-loc">Comercial · Cernica</p>
+        </div>
+      </div>
+      <div class="gi">
+        <img src="images/carport-01-santier-innorat.jpg" alt="Parcare privată Phoenix Cernica – montaj în șantier" loading="lazy"/>
+        <div class="gi-ov">
+          <p class="gi-type">Montaj structură — etapă șantier</p>
+          <p class="gi-loc">Comercial · Cernica</p>
+        </div>
+      </div>
+      <div class="gi">
+        <img src="images/carport-03-cu-utilaj.jpg" alt="Parcare privată Phoenix Cernica – pregătire sistem fotovoltaic" loading="lazy"/>
+        <div class="gi-ov">
+          <p class="gi-type">Pregătire instalare fotovoltaică</p>
+          <p class="gi-loc">Sistem 1 MW · Cernica</p>
+        </div>
+      </div>
+      <div class="gi">
+        <img src="images/carport-04-montaj-scara.jpg" alt="Parcare privată Phoenix Cernica – lucrări de montaj" loading="lazy"/>
+        <div class="gi-ov">
+          <p class="gi-type">Lucrări de montaj</p>
+          <p class="gi-loc">Comercial · Cernica</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════════════════ -->
+<section id="testimonials" class="py">
+  <div class="wrap">
+    <div class="test-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Ce spun clienții</p>
+        <h2 class="serif" style="font-size:clamp(26px,3.5vw,42px);color:var(--ch);line-height:1.1;margin-bottom:14px">Feedback real de la clienți reali</h2>
+        <p style="color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:280px">Nu promitem mai mult decât livrăm. Iată ce spun clienții noștri după finalizarea proiectelor.</p>
+        <div class="test-nav" id="test-nav">
+          <button class="test-dot active" style="width:40px" data-index="0"></button>
+          <button class="test-dot" style="width:20px" data-index="1"></button>
+          <button class="test-dot" style="width:20px" data-index="2"></button>
+          <button class="test-dot" style="width:20px" data-index="3"></button>
+          <button class="test-dot" style="width:20px" data-index="4"></button>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div>
+        <div class="test-card" id="test-card">
+          <div class="test-q">&ldquo;</div>
+          <p class="test-text serif" id="test-text">
+            Am contactat mai mulți furnizori înainte și diferența a fost evidentă de la primul apel. Au venit la măsurători, au explicat tot, oferta a venit în ziua următoare. Carportul arată exact cum voiam — curat, solid, fără nimic în plus.
+          </p>
+          <hr class="test-divider"/>
+          <p class="test-name" id="test-name">Andrei M.</p>
+          <p class="test-detail" id="test-detail">Voluntari · Carport dublu</p>
+        </div>
+
+        <div class="test-list">
+          <button class="test-list-item active" data-index="0">
+            <span class="tln">Andrei M.</span><span class="tld">Voluntari · Carport dublu</span>
+          </button>
+          <button class="test-list-item" data-index="1">
+            <span class="tln">Mihaela T.</span><span class="tld">București, Pipera · Carport la comandă</span>
+          </button>
+          <button class="test-list-item" data-index="2">
+            <span class="tln">Dan C.</span><span class="tld">Ilfov · Carport fotovoltaic</span>
+          </button>
+          <button class="test-list-item" data-index="3">
+            <span class="tln">Constantin B.</span><span class="tld">Predeal · Parcare comercială, 12 locuri</span>
+          </button>
+          <button class="test-list-item" data-index="4">
+            <span class="tln">Ioana S.</span><span class="tld">Cluj-Napoca · Carport simplu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════════════ -->
+<section id="faq" class="py">
+  <div class="wrap">
+    <div class="faq-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Întrebări frecvente</p>
+        <h2 class="serif" style="font-size:clamp(26px,3.5vw,42px);color:var(--ch);line-height:1.1;margin-bottom:14px">Tot ce vrei să știi înainte să comanzi</h2>
+        <p style="color:var(--ch-lt);font-size:13px;line-height:1.65;max-width:260px;margin-bottom:26px">Nu găsești răspunsul? Suntem la un apel distanță.</p>
+        <a href="tel:+40700000000" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:10px">
+          <svg width="16" height="16" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          0700 000 000
+        </a>
+      </div>
+
+      <!-- Accordion -->
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Cât costă un carport?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Prețul depinde de dimensiune, materialul ales, configurație și opțiuni suplimentare. Un carport simplu pentru 1 mașină pornește de la circa 1.500–2.500 EUR, cel pentru 2 mașini de la 2.500–4.000 EUR. Primești ofertă exactă după ce discutăm dimensiunile și configurația dorită.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Cât durează montajul?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Un carport simplu se montează în 1 zi lucrătoare. Un carport dublu sau cu configurație mai complexă poate necesita 2 zile. Pregătim totul în atelier — la tine ajunge structura gata de instalat.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Ce materiale folosiți?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Lucrăm cu aluminiu anodizat sau vopsit electrostatic (culoare RAL la alegere), oțel zincat la cald și elemente de fixare din inox. Toate materialele au durată de viață de 20–30 ani cu întreținere minimă.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Se poate face pe dimensiuni personalizate?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Da, acesta este chiar punctul nostru forte. Nu lucrăm cu modele fixe — fiecare carport este proiectat și fabricat pe dimensiunile tale exacte. Contactează-ne cu lungimea, lățimea și înălțimea dorite.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Se poate integra cu panouri fotovoltaice?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Da. Structura noastră este proiectată să susțină panouri fotovoltaice standard sau premium. Putem integra sistemul PV în proiect de la început sau adapta o structură existentă.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">În ce zone din România livrați și montați?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Lucrăm în toată România. Avem proiecte finalizate în București, Ilfov, Prahova, Cluj, Brașov, Constanța, Sibiu, Timișoara și alte județe. Distanța nu este o problemă — costul de transport este inclus în ofertă.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Este nevoie de fundație sau autorizație de construcție?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Carporturile noastre se prind în beton existent sau necesită o fundație simplă — mult mai puțin decât un garaj. Autorizația de construcție nu este necesară în cele mai multe cazuri, dar recomandăm verificarea cu primăria locală.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Cât durează de la comandă până la montaj?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Termenul standard de fabricație este 3–4 săptămâni de la confirmarea comenzii. În perioadele aglomerate poate ajunge la 5–6 săptămâni. Stabilim termenul exact la semnarea contractului și îl respectăm.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">De ce ați recomanda un carport separat de casă, nu lipit de ea?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Nu este o regulă universală — depinde de configurația terenului și a casei. În anumite situații însă, un carport separat poate fi o alegere mai prudentă: reduce expunerea mașinii la resturi uscate, cuiburi de păsări sau zone de acoperiș mai puțin ventilate, și nu încarcă vizual fațada principală.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Un carport separat oferă aceeași protecție ca unul atașat casei?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Da, în ceea ce privește protecția împotriva soarelui, ploii, grindinei și zăpezii — structura este dimensionată identic. Diferența constă în amplasare: un carport separat creează o distanță suplimentară față de zona acoperișului casei, ceea ce poate limita anumite riscuri asociate acesteia.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-q-text">Se poate construi un carport separat pe orice tip de teren?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>În majoritatea cazurilor, da. Evaluăm amplasarea la fața locului și recomandăm poziția optimă în funcție de configurația curții, distanța față de casă și accesul auto. Consultanța pentru amplasare este inclusă gratuit.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════════ -->
+<section id="contact" class="py">
+  <div class="wrap">
+    <div class="contact-grid">
+      <!-- Left -->
+      <div>
+        <span class="rule"></span>
+        <p class="lbl">Solicită ofertă</p>
+        <h2 class="contact-h2 serif">Primești ofertă personalizată în 24–48 ore</h2>
+        <p class="contact-desc">Completează formularul și îți trimitem o ofertă detaliată, fără obligații. Consultanța este gratuită.</p>
+        <p class="contact-hours">Răspundem rapid — luni–vineri, 9:00–18:00</p>
+
+        <div class="qc">
+          <div class="qc-icon">
+            <svg width="16" height="16" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="var(--ch-mid)" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </div>
+          <div><div class="qc-lbl">Telefon</div><a href="tel:+40700000000" class="qc-val" style="color:var(--ch)">0700 000 000</a></div>
+        </div>
+
+        <div class="qc">
+          <div class="qc-icon" style="color:#25D366">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div><div class="qc-lbl">WhatsApp</div><a href="https://wa.me/40700000000" target="_blank" rel="noopener" class="qc-val" style="color:var(--ch)">Trimite mesaj</a></div>
+        </div>
+
+        <div class="qc">
+          <div class="qc-icon">
+            <svg width="16" height="13" viewBox="0 0 17 13" fill="none"><rect x="1" y="1" width="15" height="11" rx="1" stroke="var(--ch-mid)" stroke-width="1.3"/><path d="M1 3L8.5 8L16 3" stroke="var(--ch-mid)" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div><div class="qc-lbl">Email</div><a href="mailto:contact@carportpro.ro" class="qc-val" style="color:var(--ch)">contact@carportpro.ro</a></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div id="form-wrap">
+        <form id="contact-form" class="form-box">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-lbl">Nume complet *</label>
+              <input class="form-inp" name="name" required placeholder="Ion Popescu"/>
+            </div>
+            <div class="form-group">
+              <label class="form-lbl">Telefon *</label>
+              <input class="form-inp" name="phone" required placeholder="07XX XXX XXX"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-lbl">Email</label>
+              <input class="form-inp" type="email" name="email" placeholder="ion@exemplu.ro"/>
+            </div>
+            <div class="form-group">
+              <label class="form-lbl">Localitate *</label>
+              <input class="form-inp" name="city" required placeholder="București, Cluj..."/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-lbl">Tip carport *</label>
+            <select class="form-inp" name="type" required>
+              <option value="">Selectează tipul...</option>
+              <option>Carport 1 mașină</option>
+              <option>Carport 2 mașini</option>
+              <option>Carport la comandă</option>
+              <option>Carport fotovoltaic</option>
+              <option>Carport firme / parcări</option>
+              <option>Nu știu încă / vreau consultanță</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-lbl">Dimensiuni aproximative</label>
+            <input class="form-inp" name="dimensions" placeholder="ex: 3m × 6m, sau nu știu"/>
+          </div>
+          <div class="form-group">
+            <label class="form-lbl">Mesaj (opțional)</label>
+            <textarea class="form-inp" name="message" rows="4" placeholder="Orice detalii relevante: tip proprietate, materiale preferate, întrebări..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark form-submit">
+            Solicită ofertă personalizată
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note">Fără obligații &nbsp;·&nbsp; Consultanță gratuită &nbsp;·&nbsp; Răspuns în 24–48h</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-cta-bar">
+    <div class="wrap footer-cta-inner">
+      <div>
+        <p class="footer-cta-h serif">Construiește-ți carportul ideal.</p>
+        <p class="footer-cta-sub">Ofertă gratuită · Consultanță inclusă · Montaj garantat</p>
+      </div>
+      <a href="#contact" class="btn btn-white">
+        Solicită ofertă gratuită
+        <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap footer-main">
+    <div class="footer-cols">
+      <!-- Brand -->
+      <div style="grid-column:span 1">
+        <div class="footer-brand-logo">
+          <span class="fbl-name serif">Carport</span>
+          <span class="fbl-pro">Pro</span>
+        </div>
+        <p class="footer-brand-desc">Carporturi auto din aluminiu și metal, la comandă, montate profesionist în toată România.</p>
+        <a href="tel:+40700000000" class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          0700 000 000
+        </a>
+        <a href="mailto:contact@carportpro.ro" class="footer-contact-item">
+          <svg width="14" height="11" viewBox="0 0 17 13" fill="none"><rect x="1" y="1" width="15" height="11" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M1 3L8.5 8L16 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          contact@carportpro.ro
+        </a>
+        <span class="footer-contact-item">
+          <svg width="12" height="14" viewBox="0 0 14 17" fill="none"><path d="M7 1C4.24 1 2 3.24 2 6C2 9.9 7 16 7 16C7 16 12 9.9 12 6C12 3.24 9.76 1 7 1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="7" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          București, România
+        </span>
+      </div>
+
+      <!-- Nav -->
+      <div>
+        <p class="footer-col-head">Navigare</p>
+        <a href="#products" class="footer-link">Produse</a>
+        <a href="#why-us" class="footer-link">De ce noi</a>
+        <a href="#solar" class="footer-link">Fotovoltaic</a>
+        <a href="#portfolio" class="footer-link">Proiecte</a>
+        <a href="#contact" class="footer-link">Contact</a>
+        <a href="#faq" class="footer-link">Întrebări frecvente</a>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <p class="footer-col-head">Produse</p>
+        <a href="#products" class="footer-link">Carport auto</a>
+        <a href="#products" class="footer-link">Carport aluminiu</a>
+        <a href="#products" class="footer-link">Carport metalic</a>
+        <a href="#products" class="footer-link">Carport fotovoltaic</a>
+        <a href="#products" class="footer-link">Carport 2 mașini</a>
+        <a href="#products" class="footer-link">Carport la comandă</a>
+        <a href="#products" class="footer-link">Montaj carport România</a>
+        <a href="#products" class="footer-link">Carport București / Ilfov</a>
+      </div>
+
+      <!-- Zones -->
+      <div>
+        <p class="footer-col-head">Zone deservite</p>
+        <span class="footer-text">București &amp; Ilfov</span>
+        <span class="footer-text">Prahova</span>
+        <span class="footer-text">Cluj</span>
+        <span class="footer-text">Brașov</span>
+        <span class="footer-text">Constanța</span>
+        <span class="footer-text">Sibiu</span>
+        <span class="footer-text">Timișoara</span>
+        <span class="footer-text">Toate județele</span>
+        <div style="margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)">
+          <p class="footer-col-head">Program</p>
+          <span class="footer-text">Luni–Vineri: 9:00–18:00</span>
+          <span class="footer-text">Sâmbătă: 9:00–13:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-seo">
+        CarportPro oferă carporturi auto din aluminiu și metal, la comandă, în toată România.
+        Montaj profesionist, personalizare completă și consultanță gratuită pentru locuințe moderne și spații comerciale.
+        Soluții pentru carport simplu, dublu, fotovoltaic și parcări private.
+        Livrăm și montăm în București, Ilfov, Prahova, Cluj, Brașov, Constanța și toate județele.
+      </p>
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">© <span id="year"></span> CarportPro România · Toate drepturile rezervate</p>
+        <div class="footer-legal">
+          <a href="#">Politică de confidențialitate</a>
+          <a href="#">Termeni și condiții</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FLOATING CTA
+═══════════════════════════════════════════════════════════════ -->
+<a id="wa-float" href="https://wa.me/40700000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div id="mobile-sticky">
+  <a href="tel:+40700000000" class="ms-btn ms-btn-phone">
+    <svg width="14" height="14" viewBox="0 0 17 17" fill="none"><path d="M3.2 1.5C3.2 1.5 1.8 1.5 1.8 3C1.8 4.5 2.6 8.8 6.3 12.2C10 15.6 14.2 14.8 15.3 14.6C16.4 14.4 16.2 13.4 16.2 13.4L14.8 10.7C14.8 10.7 14.3 10.3 13.7 10.6L11.6 11.4C11.6 11.4 11 11.7 10.3 11C9.6 10.3 7.4 7.9 6.8 6.8C6.2 5.7 6.6 5.2 6.6 5.2L7.3 3C7.6 2.4 7.1 1.8 7.1 1.8L3.2 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+    Sună acum
+  </a>
+  <a href="#contact" class="ms-btn ms-btn-cta">
+    Solicită ofertă
+    <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5H12M8.5 1L12 4.5L8.5 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ── Header scroll ──────────────────────────────────────────────────────────
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+// ── Mobile menu ────────────────────────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+let menuOpen = false;
+
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  hamburger.innerHTML = menuOpen
+    ? '<svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M1 1L16 16M16 1L1 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    : '<svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+});
+
+// Close on nav link click
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    hamburger.innerHTML = '<svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M1 1H21M1 7.5H21M1 14H21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+  });
+});
+
+// ── FAQ accordion ──────────────────────────────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-icon').textContent = '+';
+    });
+    // Toggle clicked
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-icon').textContent = '−';
+    }
+  });
+});
+
+// ── Testimonials ───────────────────────────────────────────────────────────
+const testimonials = [
+  { text: 'Am contactat mai mulți furnizori înainte și diferența a fost evidentă de la primul apel. Au venit la măsurători, au explicat tot, oferta a venit în ziua următoare. Carportul arată exact cum voiam — curat, solid, fără nimic în plus.', name: 'Andrei M.', detail: 'Voluntari · Carport dublu' },
+  { text: 'Aveam nevoie de ceva care să se potrivească cu casa nouă, nu cu primul model din catalog. Mi-au propus o soluție customizată cu coloane integrate în gardul existent. Rezultatul e perfect și arhitectul casei a fost și el impresionat.', name: 'Mihaela T.', detail: 'București, Pipera · Carport la comandă' },
+  { text: 'Am ales varianta fotovoltaică și sunt mulțumit. Investiția se amortizează, mașina e protejată și instalarea a durat o singură zi. Echipa a venit pregătită, nu a fost nicio improvizație pe șantier.', name: 'Dan C.', detail: 'Ilfov · Carport fotovoltaic' },
+  { text: 'Am comandat 12 locuri de parcare acoperite pentru pensiunea noastră. Prețul a fost competitiv, s-au ținut de termen și calitatea e exact ce am discutat. Colaborare fără probleme, o recomand oricui.', name: 'Constantin B.', detail: 'Predeal · Parcare comercială, 12 locuri' },
+  { text: 'Am stat câteva luni să mă hotărăsc. Consultanța gratuită m-a ajutat să înțeleg ce am nevoie cu adevărat. Nu am simțit că mi se vinde ceva — mi s-a explicat sincer fiecare opțiune, inclusiv ce nu e necesar.', name: 'Ioana S.', detail: 'Cluj-Napoca · Carport simplu' }
+];
+
+let currentTest = 0;
+
+function setTestimonial(index) {
+  currentTest = index;
+  const t = testimonials[index];
+  document.getElementById('test-text').textContent = t.text;
+  document.getElementById('test-name').textContent = t.name;
+  document.getElementById('test-detail').textContent = t.detail;
+
+  // Update dots
+  document.querySelectorAll('.test-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+    dot.style.width = i === index ? '40px' : '20px';
+    dot.style.background = i === index ? '#1C1C1A' : '#E2DDD5';
+  });
+
+  // Update list items
+  document.querySelectorAll('.test-list-item').forEach((item, i) => {
+    item.classList.toggle('active', i === index);
+  });
+}
+
+document.querySelectorAll('.test-dot').forEach(dot => {
+  dot.addEventListener('click', () => setTestimonial(parseInt(dot.dataset.index)));
+});
+
+document.querySelectorAll('.test-list-item').forEach(item => {
+  item.addEventListener('click', () => setTestimonial(parseInt(item.dataset.index)));
+});
+
+// ── Contact form ───────────────────────────────────────────────────────────
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('form-wrap').innerHTML = `
+    <div class="form-success">
+      <div class="form-success-icon">✓</div>
+      <h3>Cererea ta a fost trimisă!</h3>
+      <p>Îți mulțumim. Vom reveni cu o ofertă personalizată în 24–48 ore.<br/>
+      Dacă ai nevoie urgent, ne poți suna direct la <strong>0700 000 000</strong>.</p>
+    </div>
+  `;
+});
+</script>
+</body>
+</html>

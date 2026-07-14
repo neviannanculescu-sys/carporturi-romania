@@ -103,15 +103,11 @@ section.py{padding:clamp(56px,7vw,100px) 0}
 
 .mdl-visual{
   position:relative;height:176px;overflow:hidden;border-bottom:1px solid var(--cream-md);
-  background:linear-gradient(180deg,#FBFAF8 0%,var(--cream-dk) 100%);
-  background-image:
-    repeating-linear-gradient(0deg,rgba(28,28,26,.04) 0 1px,transparent 1px 22px),
-    repeating-linear-gradient(90deg,rgba(28,28,26,.04) 0 1px,transparent 1px 22px),
-    linear-gradient(180deg,#FBFAF8 0%,var(--cream-dk) 100%);
+  background:var(--cream-dk);
 }
-.mdl-illustration{width:100%;height:100%;display:block}
-.mdl-card:hover .mdl-illustration{transform:translateY(-2px)}
-.mdl-illustration{transition:transform .35s ease}
+.mdl-visual::after{content:'';position:absolute;inset:0;box-shadow:inset 0 -40px 36px -30px rgba(0,0,0,.25);pointer-events:none}
+.mdl-illustration{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .5s ease}
+.mdl-card:hover .mdl-illustration{transform:scale(1.045)}
 
 .mdl-body{padding:clamp(20px,2.6vw,26px);display:flex;flex-direction:column;flex:1}
 .mdl-tag{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ch-lt);margin-bottom:8px}
@@ -166,53 +162,6 @@ footer{background:var(--ch);color:#fff}
 </style>
 </head>
 <body>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     SHARED ILLUSTRATION DEFS (gradients, hatch, car/truck, shadow)
-═══════════════════════════════════════════════════════════════ -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="roofFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#C79A5E"/>
-      <stop offset="1" stop-color="#8B6B3A"/>
-    </linearGradient>
-    <linearGradient id="roofEdge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6B5028"/>
-      <stop offset="1" stop-color="#4A3A20"/>
-    </linearGradient>
-    <linearGradient id="membraneFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#E2DDD5"/>
-    </linearGradient>
-    <linearGradient id="postFill" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#3A3A38"/>
-      <stop offset="1" stop-color="#1C1C1A"/>
-    </linearGradient>
-    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#1C1C1A" stop-opacity=".22"/>
-      <stop offset="75%" stop-color="#1C1C1A" stop-opacity=".06"/>
-      <stop offset="100%" stop-color="#1C1C1A" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="panelHatch" width="9" height="9" patternTransform="rotate(35)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="9" stroke="#1C1C1A" stroke-opacity=".18" stroke-width="1"/>
-    </pattern>
-    <symbol id="carMini" viewBox="0 0 70 26">
-      <path d="M4 20 Q2 20 2 17 L2 14 Q2 11 6 10 L14 9 L20 3 Q22 1 26 1 L46 1 Q50 1 52 4 L57 10 L64 11 Q68 11 68 15 L68 17 Q68 20 66 20 Z" fill="#1C1C1A" opacity=".5"/>
-      <circle cx="16" cy="21" r="4.2" fill="#1C1C1A" opacity=".65"/>
-      <circle cx="54" cy="21" r="4.2" fill="#1C1C1A" opacity=".65"/>
-    </symbol>
-    <symbol id="truckMini" viewBox="0 0 100 32">
-      <path d="M2 26 L2 12 L18 12 L18 6 L60 6 L60 26 Z M60 14 L84 14 Q90 14 92 19 L96 26 L60 26 Z" fill="#1C1C1A" opacity=".5"/>
-      <circle cx="18" cy="27" r="4.6" fill="#1C1C1A" opacity=".65"/>
-      <circle cx="82" cy="27" r="4.6" fill="#1C1C1A" opacity=".65"/>
-    </symbol>
-    <symbol id="scooterMini" viewBox="0 0 40 22">
-      <path d="M3 18 Q2 18 2 15.5 Q2 13 5 13 L9 13 L13 6 L20 6 L20 13 L27 13 Q32 13 34 17 L37 18" fill="none" stroke="#1C1C1A" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="8" cy="18" r="3.4" fill="#1C1C1A" opacity=".6"/>
-      <circle cx="33" cy="18" r="3.4" fill="#1C1C1A" opacity=".6"/>
-    </symbol>
-  </defs>
-</svg>
 
 <!-- ═══════════════════════════════════════════════════════════════
      HEADER
@@ -339,18 +288,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 1 -->
       <div class="mdl-card" data-cat="clasice">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="150" cy="142" rx="95" ry="9" fill="url(#groundShadow)"/>
-            <path d="M56 103 L56 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M214 58 L214 138" stroke="url(#postFill)" stroke-width="8" stroke-linecap="round"/>
-            <rect x="47" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="204" y="134" width="20" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M56 103 L214 58 L214 66 L56 111 Z" fill="url(#roofEdge)"/>
-            <path d="M56 95 L214 50 L214 58 L56 103 Z" fill="url(#roofFill)"/>
-            <path d="M56 95 L214 50 L214 58 L56 103 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M56 95 L214 50" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="96" y="106" width="72" height="27"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-01-monopanta.jpg" alt="Carport cu un singur versant — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Clasic · Monopantă</p>
@@ -368,18 +306,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 2 -->
       <div class="mdl-card" data-cat="clasice">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M46 108 L46 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M234 108 L234 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <rect x="37" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="225" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M46 108 L140 53 L234 108 L234 116 L140 61 L46 116 Z" fill="url(#roofEdge)"/>
-            <path d="M46 100 L140 45 L234 100 L234 108 L140 53 L46 108 Z" fill="url(#roofFill)"/>
-            <path d="M46 100 L140 45 L234 100 L234 108 L140 53 L46 108 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M46 100 L140 45 L234 100" fill="none" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="106" y="110" width="68" height="26"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-02-dubla-panta.jpg" alt="Carport cu două versante — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Clasic · Dublă pantă</p>
@@ -397,18 +324,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 3 -->
       <div class="mdl-card" data-cat="clasice">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="150" cy="142" rx="95" ry="9" fill="url(#groundShadow)"/>
-            <path d="M56 108 L56 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M214 58 L214 138" stroke="url(#postFill)" stroke-width="8" stroke-linecap="round"/>
-            <rect x="47" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="204" y="134" width="20" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M56 108 C 80 100 170 62 214 58 L214 66 C170 70 80 108 56 116 Z" fill="url(#roofEdge)"/>
-            <path d="M56 100 C 80 92 170 54 214 50 L214 58 C170 62 80 100 56 108 Z" fill="url(#roofFill)"/>
-            <path d="M56 100 C 80 92 170 54 214 50 L214 58 C170 62 80 100 56 108 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M56 100 C 80 92 170 54 214 50" fill="none" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="96" y="110" width="72" height="27"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-03-arcuit-monopanta.jpg" alt="Carport arcuit cu un singur versant — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Clasic · Arcuit</p>
@@ -426,18 +342,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 4 -->
       <div class="mdl-card" data-cat="clasice">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M46 113 L46 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M234 113 L234 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <rect x="37" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="225" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M46 113 C 46 90 90 51 140 51 C190 51 234 90 234 113 L234 121 C234 98 190 59 140 59 C90 59 46 98 46 121 Z" fill="url(#roofEdge)"/>
-            <path d="M46 105 C 46 82 90 43 140 43 C190 43 234 82 234 105 L234 113 C234 90 190 51 140 51 C90 51 46 90 46 113 Z" fill="url(#roofFill)"/>
-            <path d="M46 105 C 46 82 90 43 140 43 C190 43 234 82 234 105 L234 113 C234 90 190 51 140 51 C90 51 46 90 46 113 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M46 105 C 46 82 90 43 140 43 C190 43 234 82 234 105" fill="none" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="106" y="114" width="68" height="26"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-04-arcuit-dubla-panta.jpg" alt="Carport arcuit cu două versante — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Clasic · Arcuit simetric</p>
@@ -455,18 +360,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 5 -->
       <div class="mdl-card" data-cat="arhitectural">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M133 90 L128 138 L152 138 L147 90 Z" fill="url(#postFill)"/>
-            <rect x="118" y="134" width="44" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M40 78 L240 78 L240 86 L40 86 Z" fill="url(#roofEdge)"/>
-            <path d="M40 70 L240 70 L240 78 L40 78 Z" fill="url(#roofFill)"/>
-            <path d="M40 70 L240 70 L240 78 L40 78 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M40 70 L240 70" stroke="#4A3A20" stroke-width="1.3"/>
-            <path d="M133 90 L108 78 M147 90 L172 78" stroke="url(#roofEdge)" stroke-width="3" stroke-linecap="round"/>
-            <use href="#carMini" x="40" y="98" width="70" height="26"/>
-            <use href="#carMini" x="170" y="98" width="70" height="26"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-05-stalp-central.jpg" alt="Carport cu stâlp central — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Arhitectural · Stâlp central</p>
@@ -484,17 +378,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 6 -->
       <div class="mdl-card" data-cat="arhitectural">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M136 138 L136 96 Q136 88 128 84 L84 65" fill="none" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M144 138 L144 96 Q144 88 152 84 L196 65" fill="none" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <rect x="121" y="134" width="38" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M60 72 L220 72 L220 80 L60 80 Z" fill="url(#roofEdge)"/>
-            <path d="M60 64 L220 64 L220 72 L60 72 Z" fill="url(#roofFill)"/>
-            <path d="M60 64 L220 64 L220 72 L60 72 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M60 64 L220 64" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="105" y="92" width="70" height="26"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-07-stalp-ramificat.jpg" alt="Carport cu stâlp ramificat — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Arhitectural · Stâlp ramificat</p>
@@ -512,19 +396,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 7 -->
       <div class="mdl-card" data-cat="arhitectural">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="100" ry="9" fill="url(#groundShadow)"/>
-            <path d="M30 105 L30 138M140 105 L140 138M250 105 L250 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <rect x="21" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="131" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="241" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M30 105 L85 55 L140 105 L195 55 L250 105 L250 113 L195 63 L140 113 L85 63 L30 113 Z" fill="url(#roofEdge)"/>
-            <path d="M30 97 L85 47 L140 97 L195 47 L250 97 L250 105 L195 55 L140 105 L85 55 L30 105 Z" fill="url(#roofFill)"/>
-            <path d="M30 97 L85 47 L140 97 L195 47 L250 97 L250 105 L195 55 L140 105 L85 55 L30 105 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M30 97 L85 47 L140 97 L195 47 L250 97" fill="none" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="46" y="108" width="62" height="24"/>
-            <use href="#carMini" x="162" y="108" width="62" height="24"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-08-tip-w.jpg" alt="Carport cu două versante, tip W — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Arhitectural · Tip W</p>
@@ -542,19 +414,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 8 -->
       <div class="mdl-card" data-cat="arhitectural">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="150" cy="142" rx="95" ry="9" fill="url(#groundShadow)"/>
-            <path d="M55 103 L55 138" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M215 58 L215 138" stroke="url(#postFill)" stroke-width="8" stroke-linecap="round"/>
-            <path d="M55 138 L215 63" stroke="url(#roofEdge)" stroke-width="3" stroke-linecap="round" opacity=".85"/>
-            <rect x="46" y="134" width="18" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="205" y="134" width="20" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M55 103 L215 58 L215 66 L55 111 Z" fill="url(#roofEdge)"/>
-            <path d="M55 95 L215 50 L215 58 L55 103 Z" fill="url(#roofFill)"/>
-            <path d="M55 95 L215 50 L215 58 L55 103 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M55 95 L215 50" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="96" y="106" width="72" height="27"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-09-tip-n.jpg" alt="Carport cu un singur versant, tip N — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Arhitectural · Tip N</p>
@@ -572,17 +432,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 9 -->
       <div class="mdl-card" data-cat="arhitectural">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M140 138 L70 83" fill="none" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M140 138 L210 83" fill="none" stroke="url(#postFill)" stroke-width="7" stroke-linecap="round"/>
-            <rect x="122" y="134" width="36" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M50 75 L230 75 L230 83 L50 83 Z" fill="url(#roofEdge)"/>
-            <path d="M50 67 L230 67 L230 75 L50 75 Z" fill="url(#roofFill)"/>
-            <path d="M50 67 L230 67 L230 75 L50 75 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M50 67 L230 67" stroke="#4A3A20" stroke-width="1.3"/>
-            <use href="#carMini" x="105" y="95" width="70" height="26"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-10-tip-v.jpg" alt="Carport cu un singur versant, tip V — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Arhitectural · Tip V</p>
@@ -600,18 +450,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 10 -->
       <div class="mdl-card" data-cat="compact">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="150" cy="142" rx="72" ry="8" fill="url(#groundShadow)"/>
-            <path d="M90 108 L90 138" stroke="url(#postFill)" stroke-width="5" stroke-linecap="round"/>
-            <path d="M210 88 L210 138" stroke="url(#postFill)" stroke-width="5.5" stroke-linecap="round"/>
-            <rect x="83" y="134" width="14" height="4" rx="1" fill="#1C1C1A" opacity=".45"/>
-            <rect x="202" y="134" width="16" height="4" rx="1" fill="#1C1C1A" opacity=".45"/>
-            <path d="M90 108 L210 88 L210 93 L90 113 Z" fill="url(#roofEdge)"/>
-            <path d="M90 102 L210 82 L210 88 L90 108 Z" fill="url(#roofFill)"/>
-            <path d="M90 102 L210 82 L210 88 L90 108 Z" fill="url(#panelHatch)" opacity=".5"/>
-            <path d="M90 102 L210 82" stroke="#4A3A20" stroke-width="1.1"/>
-            <use href="#scooterMini" x="118" y="116" width="46" height="20"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-06-usor.jpg" alt="Carport ușor cu un singur versant — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Compact · Versant unic</p>
@@ -629,18 +468,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 11 -->
       <div class="mdl-card" data-cat="mare">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="105" ry="9" fill="url(#groundShadow)"/>
-            <path d="M22 73 L22 138" stroke="url(#postFill)" stroke-width="9" stroke-linecap="round"/>
-            <path d="M258 73 L258 138" stroke="url(#postFill)" stroke-width="9" stroke-linecap="round"/>
-            <rect x="11" y="134" width="22" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <rect x="247" y="134" width="22" height="5" rx="1" fill="#1C1C1A" opacity=".5"/>
-            <path d="M22 73 L258 73 L258 84 L22 84 Z" fill="url(#roofEdge)"/>
-            <path d="M22 62 L258 62 L258 73 L22 73 Z" fill="url(#roofFill)"/>
-            <path d="M22 62 L258 62 L258 73 L22 73 Z" fill="url(#panelHatch)" opacity=".55"/>
-            <path d="M22 62 L258 62" stroke="#4A3A20" stroke-width="1.4"/>
-            <use href="#truckMini" x="90" y="102" width="100" height="32"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-11-comercial.jpg" alt="Carport pentru autocare și camioane — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Capacitate mare · Deschidere largă</p>
@@ -658,17 +486,7 @@ footer{background:var(--ch);color:#fff}
       <!-- 12 -->
       <div class="mdl-card" data-cat="mare">
         <div class="mdl-visual">
-          <svg class="mdl-illustration" viewBox="0 0 280 160" preserveAspectRatio="xMidYMax meet">
-            <ellipse cx="140" cy="142" rx="98" ry="9" fill="url(#groundShadow)"/>
-            <path d="M46 96 L46 138M140 82 L140 138M234 96 L234 138" stroke="url(#postFill)" stroke-width="4.5" stroke-linecap="round"/>
-            <rect x="39" y="134" width="14" height="4" rx="1" fill="#1C1C1A" opacity=".45"/>
-            <rect x="133" y="134" width="14" height="4" rx="1" fill="#1C1C1A" opacity=".45"/>
-            <rect x="227" y="134" width="14" height="4" rx="1" fill="#1C1C1A" opacity=".45"/>
-            <path d="M40 96 Q90 118 140 100 Q190 82 240 96 L240 104 Q190 90 140 108 Q90 126 40 104 Z" fill="url(#membraneFill)" stroke="#B7ADA0" stroke-width="1"/>
-            <path d="M40 96 Q90 118 140 100 Q190 82 240 96" fill="none" stroke="#9C9284" stroke-width="1.2"/>
-            <use href="#carMini" x="76" y="106" width="60" height="24"/>
-            <use href="#carMini" x="168" y="106" width="60" height="24"/>
-          </svg>
+          <img class="mdl-illustration" src="images/modele/model-12-membrana.jpg" alt="Carport cu structură de membrană — imagine din catalogul producătorului" loading="lazy"/>
         </div>
         <div class="mdl-body">
         <p class="mdl-tag">Capacitate mare · Membrană</p>
